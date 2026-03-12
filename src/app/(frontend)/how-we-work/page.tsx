@@ -10,14 +10,15 @@ import {
   Handshake,
   Layout,
 } from 'lucide-react'
-import { HeroSection } from '@/components/sections/HeroSection'
-import { MarketRealitySection } from '@/components/sections/MarketRealitySection'
 import { ProblemSolutionSection } from '@/components/sections/ProblemSolutionSection'
 import { FeatureGrid } from '@/components/sections/FeatureGrid'
 import { ProcessSteps } from '@/components/sections/ProcessSteps'
 import { Testimonial } from '@/components/sections/Testimonial'
 import { FAQ } from '@/components/sections/FAQ'
 import { CTABanner } from '@/components/sections/CTABanner'
+import ChangeSection from '@/components/sections/Change'
+import MarketRealitySection from '@/components/sections/MarketRealitySection'
+
 
 export const dynamic = 'force-static'
 export const revalidate = 600
@@ -25,23 +26,16 @@ export const revalidate = 600
 export default function Page() {
   return (
     <div className="bg-background text-foreground">
-      <HeroSection
+      {/* <HeroSection
         tagline="Unsere LbC Methode für KMU & Mid-Market"
         heading="Veränderungen sicher umsetzen – strategisch klar, operativ präsent"
         subheading="Wir verbinden Erfahrung mit einer eigenen LbC-Methodik, die Führung, Organisation und Alltag in Deckung bringt – für sichere Veränderung, schnelle Umsetzung und messbare Resultate bei überschaubarem Risiko."
         image1={{ src: '/website-template-OG.webp', alt: 'Workshop' }}
         image2={{ src: '/website-template-OG.webp', alt: 'Leadership' }}
-      />
-
-      <MarketRealitySection
-        tagline="Die Realität im Markt"
-        heading="Warum klassisches Management nicht mehr reicht"
-        intro="Die Anforderungen sind gestiegen, der Spielraum ist kleiner geworden. In dieser Lage erzeugen alte Steuerungslogiken oft Friktion – und genau die wird teuer."
-        content={[
-          'Unternehmern und Führungskräften wird heute vieles gleichzeitig abverlangt: Nachfolge, Kostendruck, Substanzwerte regenerieren, Digitalisierung, geopolitische Unsicherheit. Was früher mit Planung, Reporting und Kontrolle ausreichend war, führt heute oft zu einem Paradox: Mehr Steuerung – weniger Wirkung.',
-          'Die Folge sind Frustration, zäher Fortschritt und mikroökonomische Schäden, die man erst spät in der GuV sieht: Opportunitätskosten, Fluktuation, Qualitätsverluste und verpasste Entscheidungen.',
-        ]}
-      />
+      /> */}
+      
+      <ChangeSection />
+      <MarketRealitySection />
 
       <ProblemSolutionSection />
 

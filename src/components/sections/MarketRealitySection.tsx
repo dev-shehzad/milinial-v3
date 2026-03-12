@@ -1,61 +1,65 @@
-import React from 'react'
-import { Badge } from '@/components/ui/badge'
-import { cn } from '@/utilities/ui'
+"use client";
 
-interface MarketRealityProps {
-  tagline: string
-  heading: string
-  intro: string
-  content: string[]
-  className?: string
-}
-
-export const MarketRealitySection: React.FC<MarketRealityProps> = ({
-  tagline,
-  heading,
-  intro,
-  content,
-  className,
-}) => {
+export default function MarketRealitySection() {
   return (
-    <section className={cn('container mb-32 relative overflow-hidden', className)}>
-      {/* Background Graphic Element */}
-      <div className="absolute top-0 left-0 w-1/3 h-full -z-10 opacity-[0.03] pointer-events-none">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-          <path
-            fill="currentColor"
-            d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,79.6,-46.9C87.4,-34.7,90.1,-20.4,89.1,-6.5C88.1,7.4,83.4,20.8,75.4,32.8C67.4,44.8,56.1,55.4,43.5,63.1C30.9,70.8,17,75.6,2.6,71.1C-11.8,66.6,-26.7,52.8,-40.4,41.2C-54.1,29.6,-66.6,20.2,-71.4,7.8C-76.2,-4.6,-73.3,-20,-64.8,-32.8C-56.3,-45.6,-42.2,-55.8,-27.6,-62.8C-13,-69.8,2.1,-73.6,16.8,-75.6C31.5,-77.6,45.8,-77.8,44.7,-76.4Z"
-            transform="translate(100 100)"
-          />
-        </svg>
-      </div>
+    <section className="w-full bg-[#F5F6F8] py-20">
+      <div className="max-w-7xl mx-auto px-6">
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
-        {/* Left Column: Tagline + Headline */}
-        <div className="lg:col-span-5 flex flex-col justify-start">
-          <div className="mb-6">
-            <Badge
-              variant="secondary"
-              className="rounded-full bg-muted/50 text-muted-foreground font-medium px-4 py-1.5 text-sm hover:bg-muted/50"
-            >
-              {tagline}
-            </Badge>
-          </div>
-          <h2 className="text-3xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.15]">
-            {heading}
-          </h2>
+        {/* Badge */}
+        <div className="mb-6">
+          <span className="inline-block bg-[#E9E7FC] text-[#2D3142] text-sm px-4 py-2 rounded-full">
+            Die Realität im Markt
+          </span>
         </div>
 
-        {/* Right Column: Content */}
-        <div className="lg:col-span-7 flex flex-col gap-8 pt-2">
-          <p className="text-xl lg:text-2xl font-medium text-foreground leading-relaxed">{intro}</p>
-          <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
-            {content.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+        {/* Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+          {/* Left Side */}
+          <div className="relative">
+            <h2 className="text-[34px] md:text-[44px] lg:text-[52px] font-semibold text-[#1F2437] leading-[1.1] max-w-[520px]">
+              Warum klassisches <br />
+              Management nicht <br />
+              mehr reicht
+            </h2>
+
+            {/* Background pattern */}
+            <div className="absolute -bottom-10 left-0 opacity-20 pointer-events-none">
+              <svg width="220" height="160" viewBox="0 0 220 160" fill="none">
+                <rect x="10" y="70" width="60" height="60" transform="rotate(45 10 70)" stroke="#C9CEDA"/>
+                <rect x="80" y="10" width="60" height="60" transform="rotate(45 80 10)" stroke="#C9CEDA"/>
+                <rect x="140" y="70" width="60" height="60" transform="rotate(45 140 70)" stroke="#C9CEDA"/>
+                <rect x="80" y="120" width="60" height="60" transform="rotate(45 80 120)" stroke="#C9CEDA"/>
+              </svg>
+            </div>
           </div>
+
+          {/* Right Side */}
+          <div className="max-w-[560px]">
+            <p className="text-[20px] md:text-[22px] text-[#2E2E2E] leading-relaxed mb-8">
+              Die Anforderungen sind gestiegen, der Spielraum ist kleiner
+              geworden. In dieser Lage erzeugen alte Steuerungslogiken oft
+              Friktion – und genau die wird teuer.
+            </p>
+
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Unternehmern und Führungskräften wird heute vieles gleichzeitig
+              abverlangt: Nachfolge, Kostendruck, Substanzwerte regenerieren,
+              Digitalisierung, geopolitische Unsicherheit. Was früher mit
+              Planung, Reporting und Kontrolle ausreichend war, führt heute
+              oft zu einem Paradox: Mehr Steuerung – weniger Wirkung.
+            </p>
+
+            <p className="text-gray-600 leading-relaxed">
+              Die Folge sind Frustration, zäher Fortschritt und
+              mikroökonomische Schäden, die man erst spät in der GuV sieht:
+              Opportunitätskosten, Fluktuation, Qualitätsverluste und
+              verpasste Entscheidungen.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
-  )
+  );
 }
