@@ -1,44 +1,81 @@
-import React from 'react'
-import { Card, CardContent } from '@/components/ui/card'
+import React from "react"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion'
+} from "@/components/ui/accordion"
 
 interface FAQProps {
-  heading: string
   questions: {
     question: string
     answer: string
   }[]
-  className?: string
 }
 
-export const FAQ: React.FC<FAQProps> = ({ heading, questions, className }) => {
+export const FAQ: React.FC<FAQProps> = ({ questions }) => {
   return (
-    <section className="container mb-32 max-w-4xl">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">{heading}</h2>
-        <p className="mt-4 text-xl text-muted-foreground">Transparenz ist Teil unserer Kultur.</p>
+    <section className="w-full py-28 bg-[#ffffff]">
+      <div className="max-w-[900px] mx-auto px-6">
+    {/* badge */}
+<div className="flex justify-center mb-6">
+  <span
+    className="
+    px-4 
+    py-1 
+    text-[14px] 
+    rounded-full 
+    border 
+    border-[#C3BBA833] 
+    bg-[#F3F4F7] 
+    text-[#3D3D3D]
+    "
+  >
+    Häufige Fragen zu Leadership by Congruence® (LbC)
+  </span>
+</div>
+        {/* heading */}
+        <h2 className="text-center text-[48px] font-semibold leading-[1.1] text-black">
+          Häufig gefragt. Direkt beantwortet.
+        </h2>
+
+        <p className="text-center text-gray-500 text-[16px] max-w-[620px] mx-auto mt-6">
+          Transparente Antworten auf die Fragen, die Entscheider vor dem Start
+          wirklich interessieren: Risiko, Ressourcen, Resultate.
+        </p>
+
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full mt-14 space-y-4"
+        >
+          {questions.map((item, index) => (
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="
+              border 
+              border-[#C3BBA833] 
+              rounded-[12px] 
+              bg-white 
+              px-6
+              data-[state=open]:bg-gradient-to-r
+              data-[state=open]:from-[#6A4BFA33]
+              data-[state=open]:to-[#6A4BFA1A]
+              "
+            >
+              <AccordionTrigger className="text-[18px] font-medium text-black py-5 hover:no-underline">
+                {item.question}
+              </AccordionTrigger>
+
+              <AccordionContent className="text-gray-500 pb-6 leading-relaxed text-[15px]">
+                {item.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+
       </div>
-      <Accordion type="single" collapsible className="w-full space-y-4">
-        {questions.map(({ question, answer }, i) => (
-          <AccordionItem
-            key={i}
-            value={`item-${i}`}
-            className="border rounded-lg bg-card px-6 py-2 shadow-sm"
-          >
-            <AccordionTrigger className="text-lg font-medium hover:text-primary transition-colors">
-              {question}
-            </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-base leading-relaxed">
-              {answer}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
     </section>
   )
 }

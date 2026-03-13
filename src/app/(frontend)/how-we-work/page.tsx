@@ -15,7 +15,7 @@ import { FeatureGrid } from '@/components/sections/FeatureGrid'
 import { ProcessSteps } from '@/components/sections/ProcessSteps'
 import { Testimonial } from '@/components/sections/Testimonial'
 import { FAQ } from '@/components/sections/FAQ'
-import { CTABanner } from '@/components/sections/CTABanner'
+import CTABanner from '@/components/sections/CTABanner'
 import ChangeSection from '@/components/sections/Change'
 import MarketRealitySection from '@/components/sections/MarketRealitySection'
 
@@ -26,14 +26,6 @@ export const revalidate = 600
 export default function Page() {
   return (
     <div className="bg-background text-foreground">
-      {/* <HeroSection
-        tagline="Unsere LbC Methode für KMU & Mid-Market"
-        heading="Veränderungen sicher umsetzen – strategisch klar, operativ präsent"
-        subheading="Wir verbinden Erfahrung mit einer eigenen LbC-Methodik, die Führung, Organisation und Alltag in Deckung bringt – für sichere Veränderung, schnelle Umsetzung und messbare Resultate bei überschaubarem Risiko."
-        image1={{ src: '/website-template-OG.webp', alt: 'Workshop' }}
-        image2={{ src: '/website-template-OG.webp', alt: 'Leadership' }}
-      /> */}
-      
       <ChangeSection />
       <MarketRealitySection />
 
@@ -101,7 +93,7 @@ export default function Page() {
           quote="Wir hatten nicht zu wenig Strategie – wir hatten zu wenig Kongruenz. LbC hat Ziele, Entscheidungswege und Verhalten wieder stimmig gemacht. Ab Woche 6 waren Entscheidungen schneller und Diskussionen kürzer."
           author="Stefan K."
           role="CEO, Mittelstand"
-          image="/website-template-OG.webp"
+          image="/assets/how-to-work/confidentMen.png"
         />
       </div>
 

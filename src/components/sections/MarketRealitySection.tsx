@@ -36,7 +36,7 @@ export default function MarketRealitySection() {
 
           {/* Right Side */}
           <div className="max-w-[560px]">
-            <p className="text-[20px] md:text-[22px] text-[#2E2E2E] leading-relaxed mb-8">
+            <p className="text-[20px] md:text-[22px] text-[#010101] leading-relaxed mb-8">
               Die Anforderungen sind gestiegen, der Spielraum ist kleiner
               geworden. In dieser Lage erzeugen alte Steuerungslogiken oft
               Friktion – und genau die wird teuer.
