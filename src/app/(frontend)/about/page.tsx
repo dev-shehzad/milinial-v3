@@ -6,6 +6,8 @@ import TeamImpactSection from '@/components/About/Section/TeamImpact'
 import ProfileSection from '@/components/About/Section/ProfileSection'
 import ProfileSectionTwo from '@/components/About/Section/ProfileSectionTwo'
 import LeadershipSection from '@/components/About/Section/LeadershipSection'
+import CTABanner from '@/components/About/Section/CTASection'
+import MembershipLogos from '@/components/About/Section/MembershipLogos'
 
 
 
@@ -22,6 +24,8 @@ export default function Page() {
         <ProfileSection />
         <ProfileSectionTwo />
         <LeadershipSection />
+        <CTABanner />
+        <MembershipLogos />
     </div>
   )
 }
