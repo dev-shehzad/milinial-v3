@@ -10,7 +10,7 @@ export default function BookPromo() {
         <div className="bg-[#0B0332CC] rounded-2xl pl-16 pr-0 flex items-center justify-between overflow-visible">
 
           {/* LEFT */}
-          <div className="max-w-[560px] text-white flex-shrink-0">
+          <div className="max-w-[560px] text-white shrink-0">
 
             <span className="inline-block bg-[#D6CDFE] text-[#6D6E72] text-[14px] px-4 py-1 rounded-full mb-6">
               Jetzt im Handel erhältlich
@@ -25,7 +25,7 @@ export default function BookPromo() {
             </h2>
 
             <p className="text-[18px] text-[#D8D8D8] leading-relaxed">
-              Unser aktuelles Buch "Patience First" zeigt, wie Sie als Arzt
+              Unser aktuelles Buch &quot;Patience First&quot; zeigt, wie Sie als Arzt
               Führung leben, Ihr Team nachhaltig für sich gewinnen und den
               Klinik-Erfolg langfristig sichern.
             </p>
@@ -33,7 +33,7 @@ export default function BookPromo() {
           </div>
 
           {/* RIGHT BOOK - LARGER */}
-          <div className="relative w-[480px] h-[580px]  flex-shrink-0">
+          <div className="relative w-[480px] h-[580px]  shrink-0">
 
             <Image
               src="/assets/Home/book.png"
@@ -41,7 +41,7 @@ export default function BookPromo() {
               fill
               className="
               object-contain
-              rotate-[12deg]
+              rotate-12
               scale-[1.4]
               drop-shadow-[0_70px_100px_rgba(0,0,0,0.55)]
               "

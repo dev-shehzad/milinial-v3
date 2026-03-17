@@ -1,72 +1,39 @@
-import { formatDateTime } from 'src/utilities/formatDateTime'
 import React from 'react'
-
-import type { Post } from '@/payload-types'
-
+import type { Blog } from '@/payload-types'
 import { Media } from '@/components/Media'
-import { formatAuthors } from '@/utilities/formatAuthors'
 
 export const PostHero: React.FC<{
-  post: Post
+  post: Blog
 }> = ({ post }) => {
-  const { categories, heroImage, populatedAuthors, publishedAt, title } = post
-
-  const hasAuthors =
-    populatedAuthors && populatedAuthors.length > 0 && formatAuthors(populatedAuthors) !== ''
+  const { heroImage, title } = post
 
   return (
-    <div className="relative -mt-[10.4rem] flex items-end">
-      <div className="container z-10 relative lg:grid lg:grid-cols-[1fr_48rem_1fr] text-white pb-8">
-        <div className="col-start-1 col-span-1 md:col-start-2 md:col-span-2">
-          <div className="uppercase text-sm mb-6">
-            {categories?.map((category, index) => {
-              if (typeof category === 'object' && category !== null) {
-                const { title: categoryTitle } = category
-
-                const titleToUse = categoryTitle || 'Untitled category'
-
-                const isLast = index === categories.length - 1
-
-                return (
-                  <React.Fragment key={index}>
-                    {titleToUse}
-                    {!isLast && <React.Fragment>, &nbsp;</React.Fragment>}
-                  </React.Fragment>
-                )
-              }
-              return null
-            })}
-          </div>
-
-          <div className="">
-            <h1 className="mb-6 text-3xl md:text-5xl lg:text-6xl">{title}</h1>
-          </div>
-
-          <div className="flex flex-col md:flex-row gap-4 md:gap-16">
-            {hasAuthors && (
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-1">
-                  <p className="text-sm">Author</p>
-
-                  <p>{formatAuthors(populatedAuthors)}</p>
-                </div>
-              </div>
-            )}
-            {publishedAt && (
-              <div className="flex flex-col gap-1">
-                <p className="text-sm">Date Published</p>
-
-                <time dateTime={publishedAt}>{formatDateTime(publishedAt)}</time>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-      <div className="min-h-[80vh] select-none">
+    <div className="container px-4 md:px-8 mt-4 md:mt-12 mb-8 md:mb-16 flex justify-center">
+      <div 
+        className="relative flex flex-col items-center justify-center text-center overflow-hidden w-full max-w-[1320px] min-h-[400px] md:min-h-[585px] rounded-tr-[16px] rounded-bl-[16px] py-[60px] md:py-[81px] px-[20px] lg:px-[214px] gap-[10px]"
+      >
         {heroImage && typeof heroImage !== 'string' && (
-          <Media fill priority imgClassName="-z-10 object-cover" resource={heroImage} />
+          <Media fill priority imgClassName="object-cover z-0" resource={heroImage} />
         )}
-        <div className="absolute pointer-events-none left-0 bottom-0 w-full h-1/2 bg-linear-to-t from-black to-transparent" />
+        
+        {/* Subtle overlay to ensure text is readable over different images */}
+        <div className="absolute inset-0 bg-black/10 z-0" />
+        
+        <div className="relative z-10 flex flex-col items-center gap-[30px] w-full max-w-[900px]">
+          {/* Badge */}
+          <span
+            className="flex items-center justify-center w-[208px] h-[47px] rounded-[54px] bg-[#EBEDEC] font-inter font-normal text-[16px] leading-[170%] tracking-[-0.2px] text-[#7063AA] align-middle"
+          >
+            Unser Blog & Ressourcen
+          </span>
+
+          {/* Heading */}
+          <h1
+            className="font-inter font-medium text-[36px] md:text-[64px] leading-[110%] tracking-[-1px] md:tracking-[-3px] text-white text-center align-middle"
+          >
+            {title}
+          </h1>
+        </div>
       </div>
     </div>
   )

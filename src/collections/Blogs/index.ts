@@ -15,7 +15,7 @@ import { Banner } from '../../blocks/Banner/config'
 import { Code } from '../../blocks/Code/config'
 import { MediaBlock } from '../../blocks/MediaBlock/config'
 import { generatePreviewPath } from '../../utilities/generatePreviewPath'
-import { populateAuthors } from './hooks/populateAuthors'
+
 import { revalidateDelete, revalidatePost } from './hooks/revalidatePost'
 
 import {
@@ -27,8 +27,8 @@ import {
 } from '@payloadcms/plugin-seo/fields'
 import { slugField } from 'payload'
 
-export const Posts: CollectionConfig<'posts'> = {
-  slug: 'posts',
+export const Blogs: CollectionConfig<'blogs'> = {
+  slug: 'blogs',
   access: {
     create: authenticated,
     delete: authenticated,
@@ -42,6 +42,7 @@ export const Posts: CollectionConfig<'posts'> = {
     title: true,
     slug: true,
     categories: true,
+    heroImage: true,
     meta: {
       image: true,
       description: true,
@@ -53,17 +54,21 @@ export const Posts: CollectionConfig<'posts'> = {
       url: ({ data, req }) =>
         generatePreviewPath({
           slug: data?.slug,
-          collection: 'posts',
+          collection: 'blogs',
           req,
         }),
     },
     preview: (data, { req }) =>
       generatePreviewPath({
         slug: data?.slug as string,
-        collection: 'posts',
+        collection: 'blogs',
         req,
       }),
     useAsTitle: 'title',
+  },
+  labels: {
+    singular: 'Blog',
+    plural: 'Blogs',
   },
   fields: [
     {
@@ -101,36 +106,6 @@ export const Posts: CollectionConfig<'posts'> = {
             },
           ],
           label: 'Content',
-        },
-        {
-          fields: [
-            {
-              name: 'relatedPosts',
-              type: 'relationship',
-              admin: {
-                position: 'sidebar',
-              },
-              filterOptions: ({ id }) => {
-                return {
-                  id: {
-                    not_in: [id],
-                  },
-                }
-              },
-              hasMany: true,
-              relationTo: 'posts',
-            },
-            {
-              name: 'categories',
-              type: 'relationship',
-              admin: {
-                position: 'sidebar',
-              },
-              hasMany: true,
-              relationTo: 'categories',
-            },
-          ],
-          label: 'Meta',
         },
         {
           name: 'meta',
@@ -182,43 +157,43 @@ export const Posts: CollectionConfig<'posts'> = {
       },
     },
     {
+      name: 'categories',
+      type: 'relationship',
+      admin: {
+        position: 'sidebar',
+      },
+      hasMany: true,
+      relationTo: 'categories',
+    },
+    {
+      name: 'relatedPosts',
+      type: 'relationship',
+      admin: {
+        position: 'sidebar',
+      },
+      filterOptions: ({ id }) => {
+        return {
+          id: {
+            not_in: [id],
+          },
+        }
+      },
+      hasMany: true,
+      relationTo: 'blogs',
+    },
+    {
       name: 'authors',
       type: 'relationship',
       admin: {
         position: 'sidebar',
       },
       hasMany: true,
-      relationTo: 'users',
-    },
-    // This field is only used to populate the user data via the `populateAuthors` hook
-    // This is because the `user` collection has access control locked to protect user privacy
-    // GraphQL will also not return mutated user data that differs from the underlying schema
-    {
-      name: 'populatedAuthors',
-      type: 'array',
-      access: {
-        update: () => false,
-      },
-      admin: {
-        disabled: true,
-        readOnly: true,
-      },
-      fields: [
-        {
-          name: 'id',
-          type: 'text',
-        },
-        {
-          name: 'name',
-          type: 'text',
-        },
-      ],
+      relationTo: 'authors',
     },
     slugField(),
   ],
   hooks: {
     afterChange: [revalidatePost],
-    afterRead: [populateAuthors],
     afterDelete: [revalidateDelete],
   },
   versions: {

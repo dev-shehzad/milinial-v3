@@ -99,7 +99,6 @@ export default function Page() {
 
       <div className="py-24">
         <FAQ
-          heading="Häufig gefragt. Direkt beantwortet."
           questions={[
             {
               question: 'Was ist Leadership by Congruence® (LbC) in einem Satz?',

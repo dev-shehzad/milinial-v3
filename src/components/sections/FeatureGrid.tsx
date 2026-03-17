@@ -1,11 +1,25 @@
 import React from "react"
-import { Users, Briefcase, Handshake, Monitor } from "lucide-react"
+import { Users, Briefcase, Handshake, Monitor, type LucideIcon } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/utilities/ui"
 
-export const FeatureGrid = ({ badge, heading, subheading, className }) => {
+interface Feature {
+  title: string
+  description: string
+  Icon: LucideIcon
+}
 
-  const features = [
+interface FeatureGridProps {
+  badge?: string
+  heading?: string
+  subheading?: string
+  className?: string
+  features?: Feature[]
+}
+
+export const FeatureGrid: React.FC<FeatureGridProps> = ({ badge, heading, subheading, className, features: featuresProp }) => {
+
+  const defaultFeatures: Feature[] = [
     {
       title: "Kongruenz vor Komplexität",
       Icon: Users,
@@ -31,6 +45,8 @@ Im Alltag: Klarer Ton, klare Erwartungen, echte Einbindung der Betroffenen – o
 Im Alltag: Wir sind dort, wo Wert entsteht (Teams/Prozesse), und halten gleichzeitig Governance und Stakeholder sauber geführt.`,
     },
   ]
+
+  const features = featuresProp ?? defaultFeatures
 
   return (
     <section className={cn("container mb-32", className)}>

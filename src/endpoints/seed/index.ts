@@ -14,7 +14,7 @@ const collections: CollectionSlug[] = [
   'categories',
   'media',
   'pages',
-  'posts',
+  'blogs',
   'forms',
   'form-submissions',
   'search',
@@ -138,12 +138,12 @@ export const seed = async ({
     ),
   ])
 
-  payload.logger.info(`— Seeding posts...`)
+  payload.logger.info(`— Seeding blogs...`)
 
-  // Do not create posts with `Promise.all` because we want the posts to be created in order
+  // Do not create blogs with `Promise.all` because we want the blogs to be created in order
   // This way we can sort them by `createdAt` or `publishedAt` and they will be in the expected order
   const post1Doc = await payload.create({
-    collection: 'posts',
+    collection: 'blogs',
     depth: 0,
     context: {
       disableRevalidate: true,
@@ -152,7 +152,7 @@ export const seed = async ({
   })
 
   const post2Doc = await payload.create({
-    collection: 'posts',
+    collection: 'blogs',
     depth: 0,
     context: {
       disableRevalidate: true,
@@ -161,7 +161,7 @@ export const seed = async ({
   })
 
   const post3Doc = await payload.create({
-    collection: 'posts',
+    collection: 'blogs',
     depth: 0,
     context: {
       disableRevalidate: true,
@@ -169,24 +169,24 @@ export const seed = async ({
     data: post3({ heroImage: image3Doc, blockImage: image1Doc, author: demoAuthor }),
   })
 
-  // update each post with related posts
+  // update each blog with related blogs
   await payload.update({
     id: post1Doc.id,
-    collection: 'posts',
+    collection: 'blogs',
     data: {
       relatedPosts: [post2Doc.id, post3Doc.id],
     },
   })
   await payload.update({
     id: post2Doc.id,
-    collection: 'posts',
+    collection: 'blogs',
     data: {
       relatedPosts: [post1Doc.id, post3Doc.id],
     },
   })
   await payload.update({
     id: post3Doc.id,
-    collection: 'posts',
+    collection: 'blogs',
     data: {
       relatedPosts: [post1Doc.id, post2Doc.id],
     },
@@ -226,7 +226,7 @@ export const seed = async ({
             link: {
               type: 'custom',
               label: 'Posts',
-              url: '/posts',
+              url: '/blogs',
             },
           },
           {

@@ -1,7 +1,7 @@
 import { RequiredDataFromCollectionSlug } from 'payload'
 import type { PostArgs } from './post-1'
 
-export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> = ({
+export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'blogs'> = ({
   heroImage,
   blockImage,
   author,
@@ -9,7 +9,7 @@ export const post3: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> 
   return {
     slug: 'dollar-and-sense-the-financial-forecast',
     _status: 'published',
-    authors: [author],
+    authors: [author.id],
     content: {
       root: {
         type: 'root',

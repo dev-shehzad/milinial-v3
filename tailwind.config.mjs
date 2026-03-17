@@ -2,6 +2,14 @@
 const config = {
   theme: {
     extend: {
+      fontFamily: {
+        manrope: ['Manrope', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        stacksans: ['Stack Sans Text', 'sans-serif'],
+        geist: ['var(--font-geist-sans)', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+      },
       typography: () => ({
         DEFAULT: {
           css: [

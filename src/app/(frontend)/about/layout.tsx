@@ -1,15 +1,9 @@
-import { Inter, Instrument_Serif } from "next/font/google";
+import { Inter } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
 export default function RootLayout({
   children,
 }: {

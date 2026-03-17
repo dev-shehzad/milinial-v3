@@ -10,6 +10,7 @@ export const InitTheme: React.FC = () => {
       dangerouslySetInnerHTML={{
         __html: `
   (function () {
+    /*
     function getImplicitPreference() {
       var mediaQuery = '(prefers-color-scheme: dark)'
       var mql = window.matchMedia(mediaQuery)
@@ -38,8 +39,8 @@ export const InitTheme: React.FC = () => {
         themeToSet = implicitPreference
       }
     }
-
-    document.documentElement.setAttribute('data-theme', themeToSet)
+    */
+    document.documentElement.setAttribute('data-theme', 'light')
   })();
   `,
       }}

@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { ArrowRight, MessageSquare, Calendar, Rocket } from 'lucide-react'
 import { ServiceHero } from '@/components/sections/services/ServiceHero'
 import { ServiceSection } from '@/components/sections/services/ServiceSection'
@@ -107,7 +108,6 @@ export default function ServicesPage() {
 
       {/* Steps */}
       <ProcessSteps
-        className="py-24"
         steps={[
           {
             title: 'Erstkontakt',
@@ -133,8 +133,6 @@ export default function ServicesPage() {
       {/* FAQ */}
       <div className="py-24">
         <FAQ
-          heading="Häufige Fragen - Kurz beantwortet"
-          subheading="Transparenz ist uns wichtig. Zeit, Zusammenarbeit, Vertraulichkeit und Pricing – ohne Geheimnis."
           questions={[
             {
               question: 'Wie wird Vertraulichkeit sichergestellt – gerade in sensiblen Situationen?',
@@ -170,18 +168,18 @@ export default function ServicesPage() {
                   Klarheit in wenigen Tagen. Integrieren von Strategie und Umsetzung – stehen wir zur Verfügung. Stabil, fortschrittlich und wirkungsvoll. Auch kurzfristig als Sparring zur Verfügung.
                 </p>
                 <div className="flex gap-4">
-                  <a href="/contact" className="bg-white text-[#7C3AED] px-6 py-3 rounded-full font-semibold hover:bg-white/90 transition-colors inline-flex items-center">
+                  <Link href="/contact" className="bg-white text-[#7C3AED] px-6 py-3 rounded-full font-semibold hover:bg-white/90 transition-colors inline-flex items-center">
                     Jetzt Gespräch buchen
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
-                  <a href="/contact" className="bg-white/20 text-white border border-white/30 px-6 py-3 rounded-full font-semibold hover:bg-white/30 transition-colors inline-flex items-center">
+                  </Link>
+                  <Link href="/contact" className="bg-white/20 text-white border border-white/30 px-6 py-3 rounded-full font-semibold hover:bg-white/30 transition-colors inline-flex items-center">
                     Angebot anfragen
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
              </div>
              
-             <div className="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
+             <div className="relative w-64 h-64 md:w-80 md:h-80 shrink-0">
                 <Image
                   src="/website-template-OG.webp"
                   alt="Person"

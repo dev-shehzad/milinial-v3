@@ -1,7 +1,7 @@
 import { RequiredDataFromCollectionSlug } from 'payload'
 import type { PostArgs } from './post-1'
 
-export const post2: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> = ({
+export const post2: (args: PostArgs) => RequiredDataFromCollectionSlug<'blogs'> = ({
   heroImage,
   blockImage,
   author,
@@ -9,7 +9,7 @@ export const post2: (args: PostArgs) => RequiredDataFromCollectionSlug<'posts'> 
   return {
     slug: 'global-gaze',
     _status: 'published',
-    authors: [author],
+    authors: [author.id],
     content: {
       root: {
         type: 'root',
