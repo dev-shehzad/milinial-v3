@@ -29,7 +29,7 @@ const Header = () => {
                 {/* Desktop Navigation Links */}
                 <nav className="hidden lg:flex items-center gap-8 xl:gap-10 text-[16px] font-semibold leading-[1.7] tracking-[-0.02em] text-[#111111]">
                     <Link href="/" className="hover:text-black/70 transition-colors font-manrope">Home</Link>
-                    <Link href="/patients-first-book-site" className="hover:text-black/70 transition-colors font-manrope">Angebot</Link>
+                    <Link href="/services" className="hover:text-black/70 transition-colors font-manrope">Angebot</Link>
                     <Link href="/about" className="hover:text-black/70 transition-colors font-manrope">Über uns</Link>
                     <Link href="/how-we-work" className="hover:text-black/70 transition-colors font-manrope">So arbeiten wir</Link>
                     <Link href="/blogs" className="hover:text-black/70 transition-colors font-manrope">Blog</Link>

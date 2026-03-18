@@ -4,52 +4,68 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function LeadershipSection() {
   return (
-    <section className="w-full bg-[#F7F6F4] py-[120px] px-6">
-      <div className="max-w-[980px] mx-auto text-center">
-
-        {/* Badge */}
-        <div className="inline-block px-4 py-1.5 rounded-full border border-[#E5E5E5] text-[14px] text-[#555] bg-white mb-8">
-          Warum Leadership?
+    <section className="relative w-full overflow-hidden bg-[rgba(241,241,241,0.15)] pb-20 pt-[100px] lg:pb-[80px] lg:pt-[130px] px-6 lg:px-[160px] flex justify-center items-center min-h-[763px]">
+      
+      {/* Background patterns and blurs */}
+      <div className="absolute w-[1442px] h-[530px] left-[50%] -translate-x-[50%] top-[197px] bg-gradient-to-r from-[rgba(174,175,179,0.1)] to-[rgba(255,255,255,0.1)] opacity-40 blur-[50px] z-0 pointer-events-none" />
+      
+      {/* Background blocks logic to simulate pattern */}
+      <div className="absolute inset-0 z-0 overflow-hidden hidden xl:block pointer-events-none w-full max-w-[1440px] mx-auto opacity-50">
+        
+        {/* Left Side Group 34532 */}
+        <div className="absolute w-[477.42px] h-[368.97px] left-[-114.42px] top-[412px]">
+          <div className="absolute w-[187.47px] h-[152.5px] left-[-11.94px] top-[216.47px] bg-[rgba(255,255,255,0.75)] backdrop-blur-[2px]"></div>
+          <div className="absolute w-[187.47px] h-[152.5px] left-[73.05px] top-[0px] bg-[rgba(255,255,255,0.75)] backdrop-blur-[2px]"></div>
+          <div className="absolute w-[187.47px] h-[152.5px] left-[-114.42px] top-[0px] bg-[rgba(255,255,255,0.75)] backdrop-blur-[2px]"></div>
+          <div className="absolute w-[187.47px] h-[152.5px] left-[175.53px] top-[152.5px] bg-[rgba(255,255,255,0.75)] backdrop-blur-[2px]"></div>
         </div>
 
-        {/* Heading - Updated with correct line-height */}
-        <h2 className="text-[57px] leading-[60px] font-semibold text-[#1F1F1F] tracking-[-1.5px] mb-10">
-          Mit Erfahrung und Methodik <br />
-          zu Wirksamkeit mit unserem Führungs- <br />
-          prinzip Leadership by Congruence
-        </h2>
-{/* Text Block */}
-<div className="space-y-6 text-[18px] leading-[32px] text-[#555]">
+        {/* Right Side Group 34533 */}
+        <div className="absolute w-[381.36px] h-[395px] right-[-114px] top-[-58px]">
+          <div className="absolute w-[190.68px] h-[155.11px] right-0 top-0 bg-[rgba(255,255,255,0.75)] backdrop-blur-[2px]"></div>
+          <div className="absolute w-[190.68px] h-[155.11px] right-[190.68px] top-[84.78px] bg-[rgba(255,255,255,0.75)] backdrop-blur-[2px]"></div>
+          <div className="absolute w-[190.68px] h-[155.11px] right-[105.84px] top-[239.89px] bg-[rgba(255,255,255,0.75)] backdrop-blur-[2px]"></div>
+        </div>
+      </div>
 
-  <p className="px-8 py-6 rounded-md">
-    Unternehmern und Führungskräften wird heute alles abverlangt:
-    Geopolitische Entwicklungen vorwegnehmen, Nachfolgeplanungen
-    angehen, langjährig vernachlässigte Substanzwerte regenerieren und
-    Strukturen verschlanken; zu geringen Kosten und überschaubaren
-    Risiken für alle Stakeholder.
-  </p>
+      {/* Main Content Group */}
+      <div className="relative z-10 flex flex-col items-center gap-[50px] w-full max-w-[1156px] mx-auto min-h-[609px] justify-center">
 
-  <p>
-    Klassisches Management greift nicht mehr. Es führt zu Frustration
-    mit untragbaren mikroökonomischen Schäden für das
-    Gesamtunternehmen. Mit verheerenden Folgen.
-  </p>
+        {/* Title Container */}
+        <div className="relative w-full max-w-[1043px] flex flex-col items-center pt-[10px]">
+          
+          {/* Eyebrow */}
+          <div className="absolute top-[-30px] lg:top-[-41px] flex flex-row items-center px-[14px] pl-[10px] py-[4px] gap-[4px] bg-[#FFFFFF] border border-[rgba(0,0,0,0.04)] rounded-[54px] w-[162px] h-[35px] justify-center">
+            <span className="font-['Figtree'] font-normal text-[16px] leading-[170%] tracking-[-0.2px] text-[#0C2217] whitespace-nowrap">
+              Warum Leadership?
+            </span>
+          </div>
 
-  <p>
-    Mit unserer Unterstützung erhalten Sie in herausfordernden Zeiten
-    die Fähigkeit zurück, Veränderungen sicher und erfolgreich
-    umzusetzen.
-  </p>
+          {/* Headline */}
+          <h2 className="font-['Inter'] font-semibold text-[32px] md:text-[57px] leading-[1.1] lg:leading-[60px] tracking-[-1.5px] text-center text-[#1E1A1C] m-0 w-full mt-10 lg:mt-0">
+            Mit Erfahrung und Methodik <br className="hidden lg:block"/>
+            zu Wirksamkeit mit unserem Führungs- <br className="hidden lg:block"/>
+            prinzip Leadership by Congruence
+          </h2>
 
-</div>
+        </div>
+
+        {/* Paragraph */}
+        <p className="w-full max-w-[936px] font-['Inter'] font-medium text-[16px] lg:text-[18px] leading-[1.6] lg:leading-[28px] text-center text-[#363435] m-0">
+          Unternehmern und Führungskräften wird heute alles abverlangt: Geopolitische Entwicklungen vorwegnehmen, Nachfolgeplanungen angehen, langjährig vernachlässigte Substanzwerte regenerieren und Strukturen verschlanken; zu geringen Kosten und überschaubaren Risiken für alle Stakeholder.
+          <br /><br />
+          Klassisches Management greift nicht mehr. Es führt zu Frustration mit untragbaren mikroökonomischen Schäden für das Gesamtunternehmen. Mit verheerenden Folgen.
+          <br /><br />
+          Mit unserer Unterstützung erhalten Sie in herausfordernden Zeiten die Fähigkeit zurück, Veränderungen sicher und erfolgreich umzusetzen.
+        </p>
 
         {/* Button */}
-        <div className="mt-12">
-          <button className="inline-flex items-center gap-3 bg-[#2E0E8E] hover:bg-[#250A74] text-white text-[16px] font-medium px-7 py-4 rounded-lg transition">
+        <button className="flex flex-row justify-center items-center px-[16px] py-[16px] gap-[10px] w-[168.63px] h-[56px] bg-[#1A037F] rounded-[8px] hover:bg-[#11015c] transition-colors mt-2">
+          <span className="font-['IBM_Plex_Sans',sans-serif] font-medium text-[16px] leading-[24px] text-right text-[#FFFFFF]">
             Mehr erfahren
-            <ArrowUpRight size={18} />
-          </button>
-        </div>
+          </span>
+          <ArrowUpRight className="text-white w-4 h-4" strokeWidth={2.5} />
+        </button>
 
       </div>
     </section>

@@ -1,10 +1,5 @@
 import React from 'react'
 import {
-  CheckCircle,
-  Compass,
-  Lightbulb,
-  Sparkles,
-  Target,
   Users,
   Layers,
   Handshake,
@@ -12,12 +7,14 @@ import {
 } from 'lucide-react'
 import { ProblemSolutionSection } from '@/components/sections/ProblemSolutionSection'
 import { FeatureGrid } from '@/components/sections/FeatureGrid'
-import { ProcessSteps } from '@/components/sections/ProcessSteps'
-import { Testimonial } from '@/components/sections/Testimonial'
-import { FAQ } from '@/components/sections/FAQ'
-import CTABanner from '@/components/sections/CTABanner'
+import { SimpleCTA } from '@/components/sections/SimpleCTA'
+import { ServicesHowItWorks } from '@/components/sections/services/ServicesHowItWorks'
+import { TestimonialSlider } from '@/components/sections/TestimonialSlider'
+import PatientsFirstBookFAQ from '@/components/PatientsFirstBookSite/FAQ'
 import ChangeSection from '@/components/sections/Change'
 import MarketRealitySection from '@/components/sections/MarketRealitySection'
+import { BottomCTA } from '@/components/sections/services/BottomCTA'
+import { Memberships } from '@/components/Memberships'
 
 
 export const dynamic = 'force-static'
@@ -63,72 +60,55 @@ export default function Page() {
         ]}
       />
 
-      <ProcessSteps
-        steps={[
+      <ServicesHowItWorks />
+      <SimpleCTA />
+
+      <TestimonialSlider />
+  
+      <PatientsFirstBookFAQ
+        eyebrow="FAQ zu LbC"
+        title="Häufig gefragt. Direkt beantwortet."
+        description="Transparente Antworten auf die Fragen, die Entscheider vor dem Start wirklich interessieren: Risiko, Ressourcen, Resultate."
+        faqs={[
           {
-            title: 'Klarheit schaffen (Diagnose & Prioritäten)',
-            description: 'Ziele, Engpässe, Entscheidungslogik, Rollen – mangel/muss.',
-            icon: <Compass />,
+            question: 'Was ist Leadership by Congruence® (LbC) in einem Satz?',
+            answer:
+              'Ein Führungsansatz, der Strategie, Struktur und Verhalten in Einklang bringt, um Reibungsverluste zu minimieren und Umsetzungskraft zu maximieren.',
           },
           {
-            title: 'Kongruenz herstellen (Führungssystem ausrichten)',
-            description: 'Rollen, Verantwortungen, Steuerung (meeting), Meeting-Architektur.',
-            icon: <Target />,
+            question: 'Wie schnell sieht man Wirkung?',
+            answer:
+              'Oft schon nach wenigen Wochen, da wir an den echten Engpässen (Entscheidungen, Rollenklarheit) ansetzen und nicht nur Konzepte schreiben.',
           },
           {
-            title: 'Umsetzen im Takt (Execution & Etablieren)',
-            description: 'Maßnahmenpläne, Demos, KPI-Tracking, Eskalation / Coaching on the job.',
-            icon: <Lightbulb />,
+            question: 'Wie stellt ihr Vertraulichkeit sicher?',
+            answer: 
+              'Wir arbeiten mit strengen NDAs und diskreten Kommunikationswegen. In sensiblen Phasen agieren wir im Hintergrund oder mit neutraler Mandatierung.',
           },
           {
-            title: 'Verankern (Stabilisierung & Übergabe)',
-            description: 'Standards, Routinen, Governance – damit es ohne uns weiterläuft.',
-            icon: <Sparkles />,
+            question: 'Was unterscheidet LbC von OKR/Agile/Change-Programmen?',
+            answer:
+              'LbC ist kein Framework, das "eingeführt" wird, sondern eine Haltung und Arbeitsweise, die bestehende Strukturen nutzt und optimiert, statt alles umzuwerfen.',
+          },
+          {
+            question: 'Für welche Unternehmen ist LbC gemacht?',
+            answer:
+              'Für Organisationen im Wandel, die merken, dass klassische Hierarchie zu langsam, aber reine Selbstorganisation zu chaotisch ist.',
           },
         ]}
       />
 
-      <div className="bg-primary/5 py-24">
-        <Testimonial
-          quote="Wir hatten nicht zu wenig Strategie – wir hatten zu wenig Kongruenz. LbC hat Ziele, Entscheidungswege und Verhalten wieder stimmig gemacht. Ab Woche 6 waren Entscheidungen schneller und Diskussionen kürzer."
-          author="Stefan K."
-          role="CEO, Mittelstand"
-          image="/assets/how-to-work/confidentMen.png"
-        />
-      </div>
-
-      <div className="py-24">
-        <FAQ
-          questions={[
-            {
-              question: 'Was ist Leadership by Congruence® (LbC) in einem Satz?',
-              answer:
-                'Ein Führungsansatz, der Strategie, Struktur und Verhalten in Einklang bringt, um Reibungsverluste zu minimieren und Umsetzungskraft zu maximieren.',
-            },
-            {
-              question: 'Wie schnell sieht man Wirkung?',
-              answer:
-                'Oft schon nach wenigen Wochen, da wir an den echten Engpässen (Entscheidungen, Rollenklarheit) ansetzen und nicht nur Konzepte schreiben.',
-            },
-            {
-              question: 'Wie unterscheidet sich LbC von OKR/Agile/Change-Programmen?',
-              answer:
-                'LbC ist kein Framework, das "eingeführt" wird, sondern eine Haltung und Arbeitsweise, die bestehende Strukturen nutzt und optimiert, statt alles umzuwerfen.',
-            },
-            {
-              question: 'Für welche Unternehmen ist das gemacht?',
-              answer:
-                'Für Organisationen im Wandel, die merken, dass klassische Hierarchie zu langsam, aber reine Selbstorganisation zu chaotisch ist.',
-            },
-          ]}
-        />
-      </div>
-
-      <CTABanner
-        heading="Wir dürfen wir Verantwortung bei Ihnen übernehmen?"
-        subheading="Ob Strategie, Wachstum oder Stabilisierung: Wir unterstützen Sie, Ihre Zielsetzung, via Führungssystem und Leadership by Congruence® – strategisch klar, operativ präsent, messbar wirksam."
-        image="/website-template-OG.webp"
+      <BottomCTA 
+        title="Wo dürfen wir Verantwortung bei Ihnen übernehmen?"
+        description="Ob Übergang, Wachstum oder Stabilisierung: Wir unterstützen VR, Geschäftsleitung und Führungsteams mit Leadership by Congruence® – strategisch klar, operativ präsent, messbar wirksam."
+        imageSrc="/assets/how-to-work/couple-standing.png"
+        primaryButtonText="Leistungen ansehen"
+        primaryButtonHref="/services"
+        secondaryButtonText="Angebot anfragen"
+        secondaryButtonHref="/contact"
       />
+      
+      <Memberships />
     </div>
   )
 }

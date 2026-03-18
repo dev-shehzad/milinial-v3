@@ -1,5 +1,5 @@
-import MembershipLogos from '@/components/About/Section/MembershipLogos'
-import BookPromo from '@/components/Home/BookPromo'
+import { BookPromo } from '@/components/BookPromo'
+import { Memberships } from '@/components/Memberships'
 import HeroSection from '@/components/Home/Hero'
 import InsightsSection from '@/components/Home/InsightsSection'
 import Leadership from '@/components/Home/Leadership'
@@ -15,7 +15,7 @@ export const revalidate = 600
 
 export { generateMetadata }
 
-export default function Page() {
+export default async function Page() {
   return (
     <div className="bg-background text-foreground">
         <HeroSection />
@@ -24,8 +24,10 @@ export default function Page() {
         <ServicesSection />
         <Leadership />
         <InsightsSection />
-        <BookPromo />
-       <MembershipLogos />
+        <div className="py-12">
+          <BookPromo />
+        </div>
+        <Memberships />
     </div>
   )
 }

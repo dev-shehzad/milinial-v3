@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { cn } from '@/utilities/ui'
 import { HorizontalCard } from './HorizontalCard'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+
 export type Props = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   initialPosts: any[]

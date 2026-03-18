@@ -40,7 +40,7 @@ export const BottomCTA: React.FC<BottomCTAProps> = ({
         </div>
         {/* Card below */}
         <div
-          className="w-full rounded-tl-[16px] rounded-br-[16px] px-6 py-[36px] flex flex-col gap-[28px]"
+          className="w-full rounded-tr-[16px] rounded-bl-[16px] px-6 py-[36px] flex flex-col gap-[28px]"
           style={{ background: '#897ADB' }}
         >
           <div className="flex flex-col gap-[14px]">
@@ -78,11 +78,11 @@ export const BottomCTA: React.FC<BottomCTAProps> = ({
 
         {/* Purple gradient card — bottom-anchored, 350px tall */}
         <div
-          className="absolute left-0 right-0 bottom-0 h-[385px] rounded-[16px] flex flex-col justify-center items-end px-0"
+          className="absolute left-0 right-0 bottom-0 h-[385px] rounded-tr-[16px] rounded-bl-[16px] flex flex-col justify-center items-end px-0"
           style={{ background: '#897ADB' }}
         >
           {/* Text + Buttons — 621px wide, 42px from card right */}
-          <div className="flex flex-col items-start gap-[36px] w-[581px] mr-[60px] z-20">
+          <div className="flex flex-col items-start gap-[36px] w-full lg:w-[500px] xl:w-[581px] mr-6 xl:mr-[60px] z-20">
 
             <div className="flex flex-col gap-[16px] w-full">
               <h2 className="font-['Inter',sans-serif] font-bold text-[40px] leading-[110%] tracking-[-0.03em] text-white m-0">
@@ -119,7 +119,7 @@ export const BottomCTA: React.FC<BottomCTAProps> = ({
         </div>
 
         {/* Girl standing — left side, overflows above the card */}
-        <div className="absolute left-[30px] bottom-0 w-[420px] h-[550px] pointer-events-none z-10">
+        <div className="absolute left-[20px] xl:left-[30px] bottom-0 w-[350px] xl:w-[420px] h-[480px] xl:h-[550px] pointer-events-none z-10">
           <Image
             src={imageSrc}
             alt="Consultant"

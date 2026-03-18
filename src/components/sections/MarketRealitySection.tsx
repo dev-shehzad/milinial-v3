@@ -1,61 +1,70 @@
 "use client";
 
+import Image from "next/image";
+
 export default function MarketRealitySection() {
   return (
-    <section className="w-full bg-[#F5F6F8] py-20">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="relative w-full overflow-hidden min-h-[648px] bg-[linear-gradient(180deg,#FBFAF8_0%,#FFFFFF_23.1%)] pt-16 pb-16 md:pt-[100px] md:pb-[100px]">
+      
+      {/* Brand Pattern Background */}
+      <div className="absolute -left-4 top-[292px] w-[539px] h-[356px] blur-[2.5px] pointer-events-none z-0 hidden lg:block">
+        <Image
+          src="/assets/how-to-work/group-bg.png"
+          alt="Brand Pattern"
+          fill
+          className="object-contain"
+        />
+      </div>
 
-        {/* Badge */}
-        <div className="mb-6">
-          <span className="inline-block bg-[#E9E7FC] text-[#2D3142] text-sm px-4 py-2 rounded-full">
+      {/* Content Container */}
+      <div className="max-w-[1320px] mx-auto px-4 md:px-6 xl:px-0 relative z-10 flex flex-col">
+        
+        {/* Badge / Eyebrow */}
+        <div className="mb-[18px]">
+          <span className="inline-flex items-center pt-[4px] pb-[4px] pr-[14px] pl-[10px] gap-[4px] bg-[#E9E7FC] rounded-[54px] text-[#0C2217] font-inter text-sm md:text-[16px] font-normal leading-[170%] tracking-[-0.2px]">
             Die Realität im Markt
           </span>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-
-          {/* Left Side */}
-          <div className="relative">
-            <h2 className="text-[34px] md:text-[44px] lg:text-[52px] font-semibold text-[#1F2437] leading-[1.1] max-w-[520px]">
-              Warum klassisches <br />
-              Management nicht <br />
-              mehr reicht
+        {/* Two-column layout */}
+        <div className="flex flex-col xl:flex-row gap-10 lg:gap-[80px] xl:gap-[185px] w-full items-start">
+          
+          {/* Left Column - Main Title */}
+          <div className="w-full xl:max-w-[519px] shrink-0">
+            <h2 className="font-inter font-medium text-[36px] md:text-[48px] text-[#181C39] leading-[1.2] tracking-[-1.5px]">
+              Warum klassisches Management nicht mehr reicht
             </h2>
-
-            {/* Background pattern */}
-            <div className="absolute -bottom-10 left-0 opacity-20 pointer-events-none">
-              <svg width="220" height="160" viewBox="0 0 220 160" fill="none">
-                <rect x="10" y="70" width="60" height="60" transform="rotate(45 10 70)" stroke="#C9CEDA"/>
-                <rect x="80" y="10" width="60" height="60" transform="rotate(45 80 10)" stroke="#C9CEDA"/>
-                <rect x="140" y="70" width="60" height="60" transform="rotate(45 140 70)" stroke="#C9CEDA"/>
-                <rect x="80" y="120" width="60" height="60" transform="rotate(45 80 120)" stroke="#C9CEDA"/>
-              </svg>
-            </div>
           </div>
 
-          {/* Right Side */}
-          <div className="max-w-[560px]">
-            <p className="text-[20px] md:text-[22px] text-[#010101] leading-relaxed mb-8">
+          {/* Right Column - Body Text */}
+          <div className="w-full xl:max-w-[622px] flex flex-col gap-[28px] lg:mt-0">
+            
+            {/* Top Subheadline */}
+            <p className="font-inter font-medium text-[20px] md:text-[24px] text-[#010101]/80 leading-[1.4] tracking-[-0.5px]">
               Die Anforderungen sind gestiegen, der Spielraum ist kleiner
               geworden. In dieser Lage erzeugen alte Steuerungslogiken oft
               Friktion – und genau die wird teuer.
             </p>
 
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Unternehmern und Führungskräften wird heute vieles gleichzeitig
-              abverlangt: Nachfolge, Kostendruck, Substanzwerte regenerieren,
-              Digitalisierung, geopolitische Unsicherheit. Was früher mit
-              Planung, Reporting und Kontrolle ausreichend war, führt heute
-              oft zu einem Paradox: Mehr Steuerung – weniger Wirkung.
-            </p>
+            {/* Description Paragraph Container */}
+            <div className="flex flex-col gap-[20px]">
+              
+              {/* Paragraph 1 */}
+              <p className="font-inter font-normal text-[16px] text-[#424343] leading-[1.7]">
+                Unternehmern und Führungskräften wird heute vieles gleichzeitig
+                abverlangt: <span className="font-medium text-[#010101]">Nachfolge, Kostendruck, Substanzwerte regenerieren, Digitalisierung, geopolitische Unsicherheit.</span> Was früher
+                mit Planung, Reporting und Kontrolle ausreichend war, führt heute
+                oft zu einem Paradox: <span className="font-medium text-[#010101]">Mehr Steuerung – weniger Wirkung.</span>
+              </p>
 
-            <p className="text-gray-600 leading-relaxed">
-              Die Folge sind Frustration, zäher Fortschritt und
-              mikroökonomische Schäden, die man erst spät in der GuV sieht:
-              Opportunitätskosten, Fluktuation, Qualitätsverluste und
-              verpasste Entscheidungen.
-            </p>
+              {/* Paragraph 2 */}
+              <p className="font-inter font-normal text-[16px] text-[#424343] leading-[1.7]">
+                Die Folge sind <span className="font-medium text-[#010101]">Frustration, zäher Fortschritt</span> und mikroökonomische Schäden,
+                die man erst spät in der GuV sieht: Opportunitätskosten,
+                Fluktuation, Qualitäts-verluste und verpasste Entscheidungen.
+              </p>
+
+            </div>
           </div>
 
         </div>

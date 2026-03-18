@@ -55,8 +55,8 @@ const FAQ: React.FC<FAQProps> = ({
       {/* Header Container */}
       <div className="flex flex-col items-center gap-[16px] w-full max-w-[1017px] px-4 md:px-0 mb-[80px]">
         {/* Eyebrow */}
-        <div className="flex flex-row justify-center items-center px-[12px] py-[4px] gap-[4px] min-w-[240px] h-[35px] bg-[#F6F6F6] border border-[rgba(152,157,173,0.3)] rounded-[36px] box-border">
-          <span className="font-['Geist',sans-serif] font-normal text-[16px] leading-[170%] text-center text-[#403F3C] whitespace-nowrap">
+        <div className="flex flex-row justify-center items-center px-[12px] py-[4px] gap-[4px] min-w-[120px] md:min-w-[240px] h-auto md:h-[35px] bg-[#F6F6F6] border border-[rgba(152,157,173,0.3)] rounded-[36px] box-border px-4 text-center">
+          <span className="font-['Geist',sans-serif] font-normal text-sm md:text-[16px] leading-[170%] text-center text-[#403F3C]">
             {eyebrow}
           </span>
         </div>

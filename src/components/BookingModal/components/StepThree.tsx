@@ -19,7 +19,6 @@ export default function StepThree() {
   const inputClass = "flex-1 bg-transparent border-none outline-none font-inter font-normal text-[14px] text-[#192020] placeholder-[#BDC3C6]"
   
   const iconColor = "#BDC3C6"
-  const iconActiveColor = "#263238" // or same, depends on design, default BDC3C6
 
   return (
     <div className="w-full flex justify-center pt-[42px] px-[26px] md:px-[48px] pb-[98px]">
@@ -71,7 +70,7 @@ export default function StepThree() {
               {['Anruf', 'Zoom', 'Teams'].map((option) => {
                 const isActive = ort === option
                 return (
-                  <label key={option} className="flex flex-row items-center gap-[8px] cursor-pointer w-fit group">
+                  <label key={option} onClick={() => setOrt(option)} className="flex flex-row items-center gap-[8px] cursor-pointer w-fit group">
                     <div className="w-[26px] h-[26px] rounded-full border border-[#BDC6C6] bg-white flex items-center justify-center relative shrink-0">
                       {isActive && <div className="w-[13px] h-[13px] rounded-full bg-[#044343]"></div>}
                     </div>

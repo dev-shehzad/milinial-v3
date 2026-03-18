@@ -22,7 +22,7 @@ export const HorizontalCard: React.FC<{
   const { description, image: metaImage } = meta || {}
   const imageToUse = heroImage || metaImage
 
-  let textDescription = description || ''
+  const textDescription = description || ''
 
   const sanitizedDescription = textDescription.replace(/\s+/g, ' ').trim()
 
