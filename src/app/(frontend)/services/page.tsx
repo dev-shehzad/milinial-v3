@@ -17,7 +17,6 @@ export default function ServicesPage() {
     <div className="bg-background text-foreground overflow-hidden">
       {/* Hero Section */}
       <ServiceHero />
-
       {/* Section Intro */}
       <section className="w-full bg-[#F5F8FB] pt-[80px] lg:pt-[130px]">
         <div className="flex flex-col items-center gap-[30px] w-full px-6">
