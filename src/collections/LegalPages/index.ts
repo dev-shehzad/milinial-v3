@@ -3,6 +3,7 @@ import { authenticated } from '../../access/authenticated'
 import { authenticatedOrPublished } from '../../access/authenticatedOrPublished'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { slugField } from 'payload'
+import { revalidateLegalPage, revalidateDeleteLegalPage } from './hooks/revalidateLegalPage'
 
 export const LegalPages: CollectionConfig = {
   slug: 'legal-pages',
@@ -42,5 +43,9 @@ export const LegalPages: CollectionConfig = {
     },
     slugField(),
   ],
+  hooks: {
+    afterChange: [revalidateLegalPage],
+    afterDelete: [revalidateDeleteLegalPage],
+  },
   timestamps: true,
 }
