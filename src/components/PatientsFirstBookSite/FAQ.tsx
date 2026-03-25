@@ -55,7 +55,7 @@ const FAQ: React.FC<FAQProps> = ({
       {/* Header Container */}
       <div className="flex flex-col items-center gap-[16px] w-full max-w-[1017px] px-4 md:px-0 mb-[80px]">
         {/* Eyebrow */}
-        <div className="flex flex-row justify-center items-center px-[12px] py-[4px] gap-[4px] min-w-[120px] md:min-w-[240px] h-auto md:h-[35px] bg-[#F6F6F6] border border-[rgba(152,157,173,0.3)] rounded-[36px] box-border px-4 text-center">
+        <div className="flex flex-row justify-center items-center px-[12px] py-[4px] gap-[4px] min-w-[120px] md:min-w-[240px] h-auto md:h-[35px] bg-[#F6F6F6] border border-[rgba(152,157,173,0.3)] rounded-[36px] box-border text-center">
           <span className="font-['Geist',sans-serif] font-normal text-sm md:text-[16px] leading-[170%] text-center text-[#403F3C]">
             {eyebrow}
           </span>
@@ -81,11 +81,10 @@ const FAQ: React.FC<FAQProps> = ({
             <div
               key={index}
               onClick={() => toggleFAQ(index)}
-              className={`w-full box-border cursor-pointer transition-all duration-300 ease-in-out flex flex-col justify-center ${
-                isOpen
-                  ? 'bg-[linear-gradient(63.5deg,rgba(106,75,250,0.03)_-7.14%,rgba(106,75,250,0.135)_96.56%)] border border-[rgba(195,187,168,0.2)] rounded-[12px] px-[24px] md:px-[30px] py-[26px]'
-                  : 'bg-[#FFFFFF] border border-transparent rounded-[12px] px-[24px] md:px-[30px] py-[17px]'
-              }`}
+              className={`w-full box-border cursor-pointer transition-all duration-300 ease-in-out flex flex-col justify-center ${isOpen
+                ? 'bg-[linear-gradient(63.5deg,rgba(106,75,250,0.03)_-7.14%,rgba(106,75,250,0.135)_96.56%)] border border-[rgba(195,187,168,0.2)] rounded-[12px] px-[24px] md:px-[30px] py-[26px]'
+                : 'bg-[#FFFFFF] border border-transparent rounded-[12px] px-[24px] md:px-[30px] py-[17px]'
+                }`}
             >
               {/* Question Row */}
               <div className="flex flex-row justify-between items-center gap-[20px] w-full">
@@ -93,9 +92,8 @@ const FAQ: React.FC<FAQProps> = ({
                   {faq.question}
                 </span>
                 <div
-                  className={`shrink-0 transition-transform duration-300 ${
-                    isOpen ? 'rotate-180' : 'rotate-0'
-                  }`}
+                  className={`shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'
+                    }`}
                 >
                   <ChevronDown className="w-[24px] h-[24px] text-[#050503]" strokeWidth={2} />
                 </div>
@@ -103,9 +101,8 @@ const FAQ: React.FC<FAQProps> = ({
 
               {/* Answer */}
               <div
-                className={`grid transition-all duration-300 ease-in-out ${
-                  isOpen ? 'grid-rows-[1fr] opacity-100 mt-[16px]' : 'grid-rows-[0fr] opacity-0 mt-0'
-                }`}
+                className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100 mt-[16px]' : 'grid-rows-[0fr] opacity-0 mt-0'
+                  }`}
               >
                 <div className="overflow-hidden">
                   <p className="font-['Archivo',sans-serif] font-normal text-[16px] leading-[150%] text-[#62686A] m-0 max-w-[677px]">
