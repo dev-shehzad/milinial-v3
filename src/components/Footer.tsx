@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="flex flex-col lg:flex-row justify-between gap-12 mb-20">
                     
                     {/* LEFT - Brand and Description */}
-                    <div className="max-w-[380px]">
+                    <div className="max-w-full lg:max-w-[380px]">
                         <Link href="/" className="inline-block mb-6">
                             <Image
                                 src="/footer-logo.png"
@@ -27,7 +27,7 @@ const Footer = () => {
                     </div>
 
                     {/* RIGHT - Links Columns */}
-                    <div className="flex flex-row gap-16 lg:gap-20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 lg:flex lg:flex-row lg:gap-20">
                         
                         {/* Navigation */}
                         <div>
@@ -52,7 +52,7 @@ const Footer = () => {
                         </div>
 
                         {/* Legal */}
-                        <div>
+                        <div className="col-span-2 sm:col-span-1">
                             <h3 className="font-inter font-medium text-[16px] leading-[1.8] tracking-[-0.0125em] text-white mb-6">Legal</h3>
                             <ul className="flex flex-col gap-4">
                                 <li><Link href="/impressum" className="font-geist font-normal text-[16px] leading-[1.7] tracking-[-0.025em] text-[#A1A1AA] hover:text-white transition-colors">Impressum</Link></li>

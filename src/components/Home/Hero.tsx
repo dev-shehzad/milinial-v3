@@ -21,12 +21,12 @@ export default function Hero() {
       <div className="relative z-20 flex flex-col lg:hidden min-h-screen">
         {/* Content area — centered vertically in top portion */}
         <div className="relative z-20 flex flex-col items-center text-center px-5 sm:px-8 pt-[120px] pb-4 gap-5">
-          {/* Eyebrow */}
-          <div className="inline-flex items-center px-[10px] py-[4px] gap-[4px] bg-[#EBEDEC] rounded-[54px] max-w-full">
-            <span className="font-['Inter'] font-normal text-[11px] sm:text-[13px] leading-[170%] tracking-[-0.2px] text-[#0C2217] text-center whitespace-nowrap">
-              Leadership auf Zeit. Übergänge meistern. Zukunft sichern.
-            </span>
-          </div>
+         {/* Eyebrow */}
+<div className="inline-flex items-center px-[10px] py-[4px] gap-[4px] bg-[#EBEDEC] rounded-[54px] max-w-[calc(100vw-40px)]">
+  <span className="font-['Inter'] font-normal text-[10px] sm:text-[11px] leading-[170%] tracking-[-0.2px] text-[#0C2217] text-center break-words">
+    Leadership auf Zeit. Übergänge meistern. Zukunft sichern.
+  </span>
+</div>
 
           {/* Headline */}
           <div className="flex flex-col items-center gap-1">
@@ -41,8 +41,9 @@ export default function Hero() {
           </div>
 
           {/* Subheadline */}
-          <p className="font-['Inter'] font-medium text-[14px] sm:text-[16px] leading-[170%] text-center text-[#565959] opacity-80 m-0 max-w-[500px]">
-            Wir sichern und steigern Unternehmenswerte durch Turnaround, Value Creation und Transformation in KMU&apos;s und mittelständigen Grossunternehmen.
+          {/* Subheadline */}
+          <p className="font-['Inter'] font-medium text-[14px] sm:text-[16px] leading-[170%] text-center text-[#565959] opacity-80 m-0 w-full max-w-[500px] px-4 sm:px-6 break-words hyphens-auto">
+            Wir sichern und steigern Unternehmenswerte durch Turnaround, Value Creation und Transformation in KMU&apos;s und mittelständischen Grossunternehmen.
           </p>
 
           {/* CTA Buttons */}

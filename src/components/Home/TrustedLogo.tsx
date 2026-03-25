@@ -19,7 +19,7 @@ export default function TrustedLogos() {
       <div className="w-full max-w-[1440px] px-6 lg:px-[50px]"> 
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-[60px]"> 
  
-          {/* Div 1: Label Text — wider now */} 
+          {/* Label Text */} 
           <p 
             className="font-['Figtree'] font-semibold text-[18px] lg:text-[20px] leading-[170%] text-[#0C2217] text-center lg:text-left m-0 shrink-0"
             style={{ minWidth: '320px' }}
@@ -27,13 +27,15 @@ export default function TrustedLogos() {
             Anerkannt von Marktführern 
           </p> 
  
-          {/* Div 2: Logo container — logos smaller */}
-          <div 
-            className="flex flex-row items-center justify-between w-full"
-            style={{ height: '50px', gap: '40px' }}
-          > 
+          {/* Logo container */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-row lg:items-center lg:justify-between w-full gap-6 sm:gap-8 lg:gap-[40px]">
             {logos.map((logo, idx) => ( 
-              <div key={idx} className="flex items-center justify-center shrink-0"> 
+              <div 
+                key={idx} 
+                className={`flex items-center justify-center
+                  ${idx === logos.length - 1 ? 'col-span-2 sm:col-span-1' : ''}
+                `}
+              > 
                 <Image 
                   src={logo.src} 
                   alt={logo.alt} 
