@@ -7,7 +7,7 @@ import { Media } from '@/components/Media'
 import type { Blog } from '@/payload-types'
 import useClickableCard from '@/utilities/useClickableCard'
 
-export type HorizontalCardPostData = Pick<Blog, 'slug' | 'categories' | 'meta' | 'title' | 'createdAt' | 'heroImage'>
+export type HorizontalCardPostData = Pick<Blog, 'slug' | 'categories' | 'meta' | 'title' | 'createdAt' | 'heroImage' | 'thumbnailImage' | 'shortDescription'>
 
 export const HorizontalCard: React.FC<{
   className?: string
@@ -18,11 +18,11 @@ export const HorizontalCard: React.FC<{
   const { card, link } = useClickableCard({})
   const { className, doc, relationTo = 'blogs', index = 0 } = props
 
-  const { slug, meta, title, createdAt, heroImage } = doc || {}
+  const { slug, meta, title, createdAt, heroImage, thumbnailImage, shortDescription: dbShortDescription } = doc || {}
   const { description, image: metaImage } = meta || {}
-  const imageToUse = heroImage || metaImage
+  const imageToUse = thumbnailImage || heroImage || metaImage
 
-  const textDescription = description || ''
+  const textDescription = dbShortDescription || description || ''
 
   const sanitizedDescription = textDescription.replace(/\s+/g, ' ').trim()
 

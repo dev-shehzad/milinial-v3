@@ -42,7 +42,9 @@ export const Blogs: CollectionConfig<'blogs'> = {
     title: true,
     slug: true,
     categories: true,
+    shortDescription: true,
     heroImage: true,
+    thumbnailImage: true,
     meta: {
       image: true,
       description: true,
@@ -77,6 +79,13 @@ export const Blogs: CollectionConfig<'blogs'> = {
       required: true,
     },
     {
+      name: 'shortDescription',
+      type: 'textarea',
+      admin: {
+        description: 'A brief summary of the post. Click generate in the SEO tab to auto-fill the meta description.',
+      },
+    },
+    {
       type: 'tabs',
       tabs: [
         {
@@ -85,6 +94,14 @@ export const Blogs: CollectionConfig<'blogs'> = {
               name: 'heroImage',
               type: 'upload',
               relationTo: 'media',
+            },
+            {
+              name: 'thumbnailImage',
+              type: 'upload',
+              relationTo: 'media',
+              admin: {
+                description: 'Used for the blog list/grid cards.',
+              },
             },
             {
               name: 'content',
@@ -123,7 +140,9 @@ export const Blogs: CollectionConfig<'blogs'> = {
               relationTo: 'media',
             }),
 
-            MetaDescriptionField({}),
+            MetaDescriptionField({
+              hasGenerateFn: true,
+            }),
             PreviewField({
               // if the `generateUrl` function is configured
               hasGenerateFn: true,

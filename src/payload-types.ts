@@ -231,7 +231,15 @@ export interface Page {
 export interface Blog {
   id: string;
   title: string;
+  /**
+   * A brief summary of the post. Click generate in the SEO tab to auto-fill the meta description.
+   */
+  shortDescription?: string | null;
   heroImage?: (string | null) | Media;
+  /**
+   * Used for the blog list/grid cards.
+   */
+  thumbnailImage?: (string | null) | Media;
   content: {
     root: {
       type: string;
@@ -1243,7 +1251,9 @@ export interface FormBlockSelect<T extends boolean = true> {
  */
 export interface BlogsSelect<T extends boolean = true> {
   title?: T;
+  shortDescription?: T;
   heroImage?: T;
+  thumbnailImage?: T;
   content?: T;
   meta?:
     | T

@@ -47,12 +47,22 @@ export const ServicesHowItWorks: React.FC = () => {
         {/* ── Steps Block ── */}
         <div className="relative w-full flex justify-center">
           {/* Connecting Line (Desktop only) */}
-          <div className="hidden lg:block absolute left-[87px] right-[87px] top-[30px] h-px bg-[#373A46] opacity-[0.15] z-0"></div>
+          <div className="hidden lg:block absolute left-[30px] right-0 top-[30px] h-[2px] z-0">
+            <svg viewBox="0 0 100 6" preserveAspectRatio="none" className="w-full h-full">
+              <defs>
+                <linearGradient id="lineFade" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#373A46" stopOpacity="0.4" />
+                  <stop offset="100%" stopColor="#373A46" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <polygon points="0,0 100,2.5 100,3.5 0,6" fill="url(#lineFade)" />
+            </svg>
+          </div>
 
           {/* Steps Container */}
-          <div className="flex flex-col lg:flex-row justify-between w-full lg:w-[1080px] gap-[48px] lg:gap-[71px] relative z-10">
+          <div className="flex flex-col lg:flex-row justify-between w-full gap-[48px] lg:gap-[32px] xl:gap-[71px] relative z-10">
             {/* Step 1 */}
-            <div className="flex flex-col items-start gap-[24px] lg:gap-[32px] w-full lg:w-[312px]">
+            <div className="flex flex-col items-start gap-[24px] lg:gap-[32px] w-full lg:flex-1">
               {/* Number */}
               <div className="w-[60px] h-[60px] bg-white rounded-[8px] flex justify-center items-center shadow-[0_4px_20px_rgba(0,0,0,0.06)] relative z-10">
                 <span className="font-['Geist',sans-serif] font-medium text-[24px] leading-[140%] tracking-[-0.5px] text-[#373A46]">
@@ -73,7 +83,7 @@ export const ServicesHowItWorks: React.FC = () => {
             </div>
 
             {/* Step 2 */}
-            <div className="flex flex-col items-start gap-[24px] lg:gap-[32px] w-full lg:w-[312px]">
+            <div className="flex flex-col items-start gap-[24px] lg:gap-[32px] w-full lg:flex-1">
               {/* Number */}
               <div className="w-[60px] h-[60px] bg-white rounded-[8px] flex justify-center items-center shadow-[0_4px_20px_rgba(0,0,0,0.06)] relative z-10">
                 <span className="font-['Geist',sans-serif] font-medium text-[24px] leading-[140%] tracking-[-0.5px] text-[#373A46]">
@@ -94,7 +104,7 @@ export const ServicesHowItWorks: React.FC = () => {
             </div>
 
             {/* Step 3 */}
-            <div className="flex flex-col items-start gap-[24px] lg:gap-[32px] w-full lg:w-[312px]">
+            <div className="flex flex-col items-start gap-[24px] lg:gap-[32px] w-full lg:flex-1">
               {/* Number */}
               <div className="w-[60px] h-[60px] bg-white rounded-[8px] flex justify-center items-center shadow-[0_4px_20px_rgba(0,0,0,0.06)] relative z-10">
                 <span className="font-['Geist',sans-serif] font-medium text-[24px] leading-[140%] tracking-[-0.5px] text-[#373A46]">
@@ -115,7 +125,7 @@ export const ServicesHowItWorks: React.FC = () => {
             </div>
 
             {/* Step 4 */}
-            <div className="flex flex-col items-start gap-[24px] lg:gap-[32px] w-full lg:w-[312px]">
+            <div className="flex flex-col items-start gap-[24px] lg:gap-[32px] w-full lg:flex-1">
               {/* Number */}
               <div className="w-[60px] h-[60px] bg-white rounded-[8px] flex justify-center items-center shadow-[0_4px_20px_rgba(0,0,0,0.06)] relative z-10">
                 <span className="font-['Geist',sans-serif] font-medium text-[24px] leading-[140%] tracking-[-0.5px] text-[#373A46]">

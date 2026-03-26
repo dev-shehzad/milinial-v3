@@ -10,23 +10,25 @@ function formatDate(dateStr?: string | null): string {
   return date.toLocaleDateString("de-DE", { month: "short", year: "numeric" })
 }
 
-type SelectedBlog = Pick<Blog, 'id' | 'title' | 'slug' | 'heroImage' | 'publishedAt' | 'authors'>
+type SelectedBlog = Pick<Blog, 'id' | 'title' | 'slug' | 'heroImage' | 'thumbnailImage' | 'publishedAt' | 'authors'>
 
 type BlogCardProps = {
   blog: SelectedBlog
 }
 
 function BlogCard({ blog }: BlogCardProps) {
-  const { title, slug, heroImage, publishedAt, authors } = blog
+  const { title, slug, heroImage, thumbnailImage, publishedAt, authors } = blog
+
+  const imageToUse = thumbnailImage || heroImage
 
   const imageUrl =
-    heroImage && typeof heroImage !== "string"
-      ? (heroImage as Media).url ?? null
+    imageToUse && typeof imageToUse !== "string"
+      ? (imageToUse as Media).url ?? null
       : null
 
   const imageAlt =
-    heroImage && typeof heroImage !== "string"
-      ? (heroImage as Media).alt ?? title
+    imageToUse && typeof imageToUse !== "string"
+      ? (imageToUse as Media).alt ?? title
       : title
 
   const firstAuthor = authors?.[0]
@@ -94,6 +96,7 @@ export default async function InsightsSection() {
       title: true,
       slug: true,
       heroImage: true,
+      thumbnailImage: true,
       publishedAt: true,
       authors: true,
     },

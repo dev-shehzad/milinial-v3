@@ -25,7 +25,9 @@ export default async function Page() {
       slug: true,
       categories: true,
       meta: true,
+      shortDescription: true,
       heroImage: true,
+      thumbnailImage: true,
     },
   })
 
@@ -42,6 +44,7 @@ export default async function Page() {
       meta: true,
       createdAt: true,
       heroImage: true,
+      thumbnailImage: true,
     },
   })
 

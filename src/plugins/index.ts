@@ -6,7 +6,7 @@ import { searchPlugin } from '@payloadcms/plugin-search'
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { Plugin } from 'payload'
 import { revalidateRedirects } from '@/hooks/revalidateRedirects'
-import { GenerateTitle, GenerateURL } from '@payloadcms/plugin-seo/types'
+import { GenerateTitle, GenerateURL, GenerateDescription } from '@payloadcms/plugin-seo/types'
 import { FixedToolbarFeature, HeadingFeature, lexicalEditor } from '@payloadcms/richtext-lexical'
 import { searchFields } from '@/search/fieldOverrides'
 import { beforeSyncWithSearch } from '@/search/beforeSync'
@@ -16,6 +16,13 @@ import { getServerSideURL } from '@/utilities/getURL'
 
 const generateTitle: GenerateTitle<Blog | Page> = ({ doc }) => {
   return doc?.title ? `${doc.title} | Payload Website Template` : 'Payload Website Template'
+}
+
+const generateDescription: GenerateDescription<Blog | Page> = ({ doc }) => {
+  if (doc && 'shortDescription' in doc) {
+    return (doc.shortDescription as string) || ''
+  }
+  return ''
 }
 
 const generateURL: GenerateURL<Blog | Page> = ({ doc }) => {
@@ -65,6 +72,7 @@ export const plugins: Plugin[] = [
   seoPlugin({
     generateTitle,
     generateURL,
+    generateDescription,
   }),
   formBuilderPlugin({
     fields: {

@@ -8,7 +8,7 @@ import type { Blog } from '@/payload-types'
 
 import { Media } from '@/components/Media'
 
-export type CardPostData = Pick<Blog, 'slug' | 'categories' | 'meta' | 'title' | 'heroImage'>
+export type CardPostData = Pick<Blog, 'slug' | 'categories' | 'meta' | 'title' | 'heroImage' | 'thumbnailImage'>
 
 export const Card: React.FC<{
   alignItems?: 'center'
@@ -21,9 +21,9 @@ export const Card: React.FC<{
   const { card, link } = useClickableCard({})
   const { className, doc, relationTo, title: titleFromProps } = props
 
-  const { slug, meta, title, heroImage } = doc || {}
+  const { slug, meta, title, heroImage, thumbnailImage } = doc || {}
   const { image: metaImage } = meta || {}
-  const imageToUse = heroImage || metaImage
+  const imageToUse = thumbnailImage || heroImage || metaImage
 
   const titleToUse = titleFromProps || title
   const href = `/${relationTo}/${slug}`
