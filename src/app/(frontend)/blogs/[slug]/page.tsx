@@ -161,7 +161,7 @@ export default async function Post({ params: paramsPromise }: Args) {
           />
 
           {/* ── BACK BUTTON ── */}
-          <div className="mt-16 text-center">
+          <div className="mt-16 text-center mb-5">
             <Link
               href="/blogs"
               className="inline-flex items-center justify-center px-8 py-3 rounded text-white bg-[#1C1163] hover:bg-[#1a0e5b] transition-colors font-inter font-medium text-[16px] gap-2"
@@ -174,7 +174,7 @@ export default async function Post({ params: paramsPromise }: Args) {
 
       {relatedDocs.length > 0 && (
         <div
-          className="pb-24 pt-24 mt-24 mb-24 w-full"
+          className="pb-24 pt-24  mb-24 w-full"
           style={{ background: 'linear-gradient(180deg, #FBFAF8 0%, #F7F6F4 100%)' }}
         >
           <div className="container px-4 md:px-0 mb-8 md:mb-12 text-center">
