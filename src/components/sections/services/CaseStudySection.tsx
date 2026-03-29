@@ -107,11 +107,11 @@ export const CaseStudySection: React.FC = () => {
             className="w-full pb-6 lg:pb-0"
           >
             {caseStudies.map((caseStudy, index) => (
-              <SwiperSlide key={index} style={{ width: 'auto' }}>
+              <SwiperSlide key={index} style={{ width: 'auto', height: 'auto', display: 'flex' }}>
                 <div
-                  className={`flex flex-col ${caseStudy.title ? 'justify-between min-h-[550px]' : 'min-h-[384px]'} w-[320px] sm:w-[400px] lg:w-[634px] bg-white border border-[rgba(12,14,23,0.1)] rounded-[16px] p-[24px] sm:p-[32px] lg:p-[41px_38px] shadow-sm`}
+                  className="flex flex-col h-fit w-[320px] sm:w-[400px] lg:w-[634px] bg-white border border-[rgba(12,14,23,0.1)] rounded-[16px] p-[24px] sm:p-[32px] lg:p-[41px_38px] shadow-sm ml-0 mr-auto"
                 >
-                  <div className={`flex flex-col items-start gap-[36px] w-full ${!caseStudy.title ? 'mb-[36px]' : ''}`}>
+                  <div className="flex flex-col items-start gap-[24px] lg:gap-[36px] w-full">
                     {/* Logo image */}
                     <div
                       className="h-[42px] relative flex items-center shrink-0"
@@ -133,7 +133,7 @@ export const CaseStudySection: React.FC = () => {
                     )}
                   </div>
 
-                  <div className={`flex flex-col items-start gap-[16px] w-full mt-auto ${caseStudy.title ? 'pt-[36px]' : ''}`}>
+                  <div className="flex flex-col items-start gap-[16px] w-full mt-[20px] lg:mt-[20px]">
                     {/* Divider Line */}
                     <div className="w-full h-px bg-[#1D2B19] opacity-20"></div>
                     {/* Paragraph */}
@@ -142,8 +142,8 @@ export const CaseStudySection: React.FC = () => {
                     </p>
                   </div>
 
-                  {/* Button - position differs slightly based on presence of title */}
-                  <div className={caseStudy.title ? 'mt-[13px]' : 'mt-[29px]'}>
+                  {/* Button - wrapped directly underneath */}
+                  <div className="mt-[24px] lg:mt-[32px]">
                     <Link
                       href={caseStudy.link}
                       className="inline-flex flex-row items-center justify-center px-[22px] py-[14px] border-[1.5px] border-[#545D52] rounded-[16px] text-[#1D2B19] hover:bg-[#1D2B19] hover:text-white transition-colors duration-200 w-[176px]"
