@@ -126,7 +126,18 @@ export default function KontaktPage() {
       <ContactTrust />
 
       {/* ── SERVICES CTA (Man on right) ── */}
-      <ServicesCTA imageSrc="/assets/contact/man-standing.png" />
+      <ServicesCTA 
+        imageSrc="/assets/contact/man-standing.png"
+        title="Lieber direkt sprechen?"
+        description={
+          <div className="mt-[16px] sm:mt-[24px] flex flex-col gap-[20px] sm:gap-[24px]">
+            <span className="block">Ideal, wenn Timing kritisch ist oder direkt eingeordnet werden soll.</span>
+            <span className="block">30 Min · vertraulich · klare Einordnung/Nächster Schritt</span>
+          </div>
+        }
+        primaryButtonText="Erstgespräch buchen"
+        hideSecondaryButton={true}
+      />
 
       {/* ── MEMBERSHIPS / LOGOS ── */}
       <Memberships />

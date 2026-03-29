@@ -14,6 +14,7 @@ export interface ServicesCTAProps {
   primaryButtonHref?: string
   secondaryButtonText?: string
   secondaryButtonHref?: string
+  hideSecondaryButton?: boolean
 }
 
 export const ServicesCTA: React.FC<ServicesCTAProps> = ({
@@ -24,6 +25,7 @@ export const ServicesCTA: React.FC<ServicesCTAProps> = ({
   primaryButtonHref = "#booking",
   secondaryButtonText = "Anfrage senden",
   secondaryButtonHref = "/kontakt",
+  hideSecondaryButton = false,
 }) => {
   const { openModal } = useBooking();
   return (
@@ -52,9 +54,9 @@ export const ServicesCTA: React.FC<ServicesCTAProps> = ({
             <h2 className="font-['Inter',sans-serif] font-bold text-[24px] sm:text-[30px] leading-[110%] tracking-[-0.03em] text-white m-0">
               {title}
             </h2>
-            <p className="font-['Inter',sans-serif] font-medium text-[14px] sm:text-[16px] leading-[140%] text-[#E6E3E3] m-0">
+            <div className="font-['Inter',sans-serif] font-medium text-[14px] sm:text-[16px] leading-[140%] text-[#E6E3E3] m-0">
               {description}
-            </p>
+            </div>
           </div>
           <div className="flex flex-row flex-wrap items-center gap-[14px]">
             {primaryButtonHref === '#booking' ? (
@@ -81,13 +83,15 @@ export const ServicesCTA: React.FC<ServicesCTAProps> = ({
                 </span>
               </Link>
             )}
-            <Link
-              href={secondaryButtonHref}
-              className="inline-flex items-center pl-[14px] pr-[12px] py-[8px] gap-[10px] rounded-[14px] border border-white font-['Inter',sans-serif] font-semibold text-[15px] sm:text-[17px] leading-[170%] text-white shrink-0 hover:opacity-90 transition-opacity"
-            >
-              <span>{secondaryButtonText}</span>
-              <ArrowRight className="w-[18px] h-[18px] text-white shrink-0" strokeWidth={2} />
-            </Link>
+            {!hideSecondaryButton && (
+              <Link
+                href={secondaryButtonHref}
+                className="inline-flex items-center pl-[14px] pr-[12px] py-[8px] gap-[10px] rounded-[14px] border border-white font-['Inter',sans-serif] font-semibold text-[15px] sm:text-[17px] leading-[170%] text-white shrink-0 hover:opacity-90 transition-opacity"
+              >
+                <span>{secondaryButtonText}</span>
+                <ArrowRight className="w-[18px] h-[18px] text-white shrink-0" strokeWidth={2} />
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -130,9 +134,9 @@ export const ServicesCTA: React.FC<ServicesCTAProps> = ({
               <h2 className="font-['Inter',sans-serif] font-bold text-[40px] leading-[110%] tracking-[-0.03em] text-white m-0">
                 {title}
               </h2>
-              <p className="font-['Inter',sans-serif] font-medium text-[19px] leading-[130%] text-[#E6E3E3] m-0">
+              <div className="font-['Inter',sans-serif] font-medium text-[19px] leading-[130%] text-[#E6E3E3] m-0">
                 {description}
-              </p>
+              </div>
             </div>
 
               <div className="flex flex-row items-center gap-[38px]">
@@ -162,13 +166,15 @@ export const ServicesCTA: React.FC<ServicesCTAProps> = ({
                 </Link>
               )}
               {/* Secondary */}
-              <Link
-                href={secondaryButtonHref}
-                className="inline-flex flex-row items-center pl-[16px] pr-[12px] py-[8px] gap-[12px] rounded-[16px] border border-white font-['Inter',sans-serif] font-semibold text-[20px] leading-[170%] tracking-[-0.02em] text-white hover:opacity-90 transition-opacity shrink-0"
-              >
-                <span className="whitespace-nowrap">{secondaryButtonText}</span>
-                <ArrowRight className="w-[22px] h-[22px] text-white shrink-0" strokeWidth={2} />
-              </Link>
+              {!hideSecondaryButton && (
+                <Link
+                  href={secondaryButtonHref}
+                  className="inline-flex flex-row items-center pl-[16px] pr-[12px] py-[8px] gap-[12px] rounded-[16px] border border-white font-['Inter',sans-serif] font-semibold text-[20px] leading-[170%] tracking-[-0.02em] text-white hover:opacity-90 transition-opacity shrink-0"
+                >
+                  <span className="whitespace-nowrap">{secondaryButtonText}</span>
+                  <ArrowRight className="w-[22px] h-[22px] text-white shrink-0" strokeWidth={2} />
+                </Link>
+              )}
             </div>
 
           </div>
