@@ -116,10 +116,16 @@ export interface Config {
   globals: {
     header: Header;
     footer: Footer;
+    'book-benefits': BookBenefit;
+    'book-faq': BookFaq;
+    'services-faq': ServicesFaq;
   };
   globalsSelect: {
     header: HeaderSelect<false> | HeaderSelect<true>;
     footer: FooterSelect<false> | FooterSelect<true>;
+    'book-benefits': BookBenefitsSelect<false> | BookBenefitsSelect<true>;
+    'book-faq': BookFaqSelect<false> | BookFaqSelect<true>;
+    'services-faq': ServicesFaqSelect<false> | ServicesFaqSelect<true>;
   };
   locale: null;
   widgets: {
@@ -1768,6 +1774,61 @@ export interface Footer {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "book-benefits".
+ */
+export interface BookBenefit {
+  id: string;
+  eyebrow: string;
+  headline: string;
+  benefits: {
+    icon: 'Megaphone' | 'Zap' | 'ShieldCheck' | 'Network' | 'Search' | 'HandCoins';
+    title: string;
+    description: string;
+    id?: string | null;
+  }[];
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "book-faq".
+ */
+export interface BookFaq {
+  id: string;
+  eyebrow: string;
+  title: string;
+  description?: string | null;
+  faqs?:
+    | {
+        question: string;
+        answer: string;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "services-faq".
+ */
+export interface ServicesFaq {
+  id: string;
+  eyebrow: string;
+  title: string;
+  description?: string | null;
+  faqs?:
+    | {
+        question: string;
+        answer: string;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "header_select".
  */
 export interface HeaderSelect<T extends boolean = true> {
@@ -1806,6 +1867,63 @@ export interface FooterSelect<T extends boolean = true> {
               url?: T;
               label?: T;
             };
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "book-benefits_select".
+ */
+export interface BookBenefitsSelect<T extends boolean = true> {
+  eyebrow?: T;
+  headline?: T;
+  benefits?:
+    | T
+    | {
+        icon?: T;
+        title?: T;
+        description?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "book-faq_select".
+ */
+export interface BookFaqSelect<T extends boolean = true> {
+  eyebrow?: T;
+  title?: T;
+  description?: T;
+  faqs?:
+    | T
+    | {
+        question?: T;
+        answer?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "services-faq_select".
+ */
+export interface ServicesFaqSelect<T extends boolean = true> {
+  eyebrow?: T;
+  title?: T;
+  description?: T;
+  faqs?:
+    | T
+    | {
+        question?: T;
+        answer?: T;
         id?: T;
       };
   updatedAt?: T;

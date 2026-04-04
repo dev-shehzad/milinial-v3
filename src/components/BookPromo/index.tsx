@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowUpRight } from 'lucide-react'
 
 export const BookPromo: React.FC = () => {
   return (
@@ -27,10 +29,20 @@ export const BookPromo: React.FC = () => {
             </h2>
 
             <p
-              className="max-w-[550px] font-sans font-medium text-[16px] md:text-[18px] leading-[140%] md:leading-[120%] text-[#D8D8D8]"
+              className="max-w-[550px] font-sans font-medium text-[16px] md:text-[18px] leading-[140%] md:leading-[120%] text-[#D8D8D8] mb-6 md:mb-8"
             >
               Unser aktuelles Buch &quot;Patience First&quot; zeigt, wie Sie als Arzt Führung leben, Ihr Team nachhaltig für sich gewinnen und den Klinik-Erfolg langfristig sichern.
             </p>
+
+            <div className="w-full sm:w-auto mt-2">
+              <Link
+                href="/patients-first-book-site"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-white text-[#190D00] rounded-[12px] sm:rounded-[16px] px-5 py-3 sm:px-8 sm:py-4 font-semibold text-[14px] sm:text-[16px] hover:bg-gray-100 transition-colors"
+              >
+                Zum Buch „Patients First“
+                <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
+              </Link>
+            </div>
           </div>
 
           {/* Right Image */}

@@ -1,4 +1,6 @@
 import React from 'react'
+import { getPayload } from 'payload'
+import configPromise from '@payload-config'
 
 import { ServiceHero } from '@/components/sections/services/ServiceHero'
 import { ServiceSection } from '@/components/sections/services/ServiceSection'
@@ -10,9 +12,15 @@ import { ServicesCTA } from '@/components/sections/services/ServicesCTA'
 import { ServicesHowItWorks } from '@/components/sections/services/ServicesHowItWorksServics'
 
 export const dynamic = 'force-static'
-export const revalidate = 600
+export const revalidate = 60 // Revalidate every 60 seconds to pick up CMS changes
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const payload = await getPayload({ config: configPromise })
+
+  const servicesFAQ = await payload.findGlobal({
+    slug: 'services-faq',
+  })
+
   return (
     <div className="bg-background text-foreground overflow-hidden">
       {/* Hero Section */}
@@ -110,33 +118,7 @@ export default function ServicesPage() {
       <CaseStudySection />
 
       {/* FAQ */}
-      <PatientsFirstBookFAQ
-        eyebrow="Häufige Fragen"
-        title="Häufig gestellte Fragen"
-        description="Alle wichtigen Informationen zu unserem Vorgehen, unserer Arbeitsweise und Preisgestaltung auf einen Blick."
-        faqs={[
-          {
-            question: 'Wie wird Vertraulichkeit sichergestellt – gerade in sensiblen Situationen?',
-            answer: 'Wir arbeiten mit strengen NDAs und diskreten Kommunikationswegen. In sensiblen Phasen (z.B. Restrukturierung) agieren wir im Hintergrund oder mit neutraler Mandatierung.',
-          },
-          {
-            question: 'Wie schnell sieht man Wirkung?',
-            answer: 'Unser Ansatz zielt auf schnelle Stabilisierung. Oft sind bereits nach wenigen Tagen/Wochen erste operative Effekte (Cash, Ruhe, Klarheit) sichtbar.',
-          },
-          {
-            question: 'Wie schnell kann gestartet werden?',
-            answer: 'In akuten Krisen oft innerhalb von 48 Stunden. Bei geplanten Transformationen stimmen wir den Starttermin gemeinsam ab.',
-          },
-          {
-            question: 'Wie läuft die Preisgestaltung ab?',
-            answer: 'Transparent und erfolgsorientiert. Tagessätze oder Pauschalen je nach Mandat, oft kombiniert mit einer Erfolgskomponente.',
-          },
-          {
-            question: 'Wird vor Ort (im Office) gearbeitet?',
-            answer: 'Ja, operative Präsenz ist Teil des Modells. Wir sind dort, wo die Entscheidungen fallen und die Wertschöpfung stattfindet – aber nicht unnötig permanent.',
-          },
-        ]}
-      />
+      <PatientsFirstBookFAQ data={servicesFAQ} />
 
       {/* Bottom CTA */}
       <BottomCTA />

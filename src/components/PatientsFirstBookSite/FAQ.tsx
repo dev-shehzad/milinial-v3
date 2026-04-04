@@ -8,7 +8,16 @@ export interface FAQItem {
   answer: string;
 }
 
+export interface CMSFAQData {
+  eyebrow?: string | null;
+  title?: string | null;
+  description?: string | null;
+  faqs?: { question: string; answer: string; id?: string | null }[] | null;
+}
+
 export interface FAQProps {
+  data?: CMSFAQData | null;
+  // Legacy direct props (still supported for backwards compat)
   faqs?: FAQItem[];
   eyebrow?: string;
   title?: string;
@@ -39,11 +48,17 @@ const defaultFaqs = [
 ]
 
 const FAQ: React.FC<FAQProps> = ({
-  faqs = defaultFaqs,
-  eyebrow = "Häufige Fragen - transparent",
-  title = "Alles, was Sie vorab wissen möchten",
-  description = "Die häufigsten Fragen zum kostenlosen Kapitel und zum Buchkauf – kompakt beantwortet, ohne Kleingedrucktes."
+  data,
+  faqs: faqsProp,
+  eyebrow: eyebrowProp,
+  title: titleProp,
+  description: descriptionProp,
 }) => {
+  // CMS data takes priority, but fallback to direct props, then defaults
+  const eyebrow = data?.eyebrow ?? eyebrowProp ?? 'Häufige Fragen - transparent'
+  const title = data?.title ?? titleProp ?? 'Alles, was Sie vorab wissen möchten'
+  const description = data?.description ?? descriptionProp ?? 'Die häufigsten Fragen zum kostenlosen Kapitel und zum Buchkauf – kompakt beantwortet, ohne Kleingedrucktes.'
+  const faqs = (data?.faqs && data.faqs.length > 0) ? data.faqs : (faqsProp ?? defaultFaqs)
   const [openIndex, setOpenIndex] = useState<number | null>(1) // Default open second one matching mockup
 
   const toggleFAQ = (index: number) => {

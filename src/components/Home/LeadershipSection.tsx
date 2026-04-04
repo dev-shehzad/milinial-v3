@@ -61,7 +61,7 @@ export default function LeadershipSection() {
         </p>
 
         {/* Button */}
-        <Link href="/about" className="flex flex-row justify-center items-center px-[16px] py-[16px] gap-[10px] w-[168.63px] h-[56px] bg-[#1A037F] rounded-[8px] hover:opacity-90 transition-opacity mt-2 font-['Figtree',sans-serif]">
+        <Link href="/how-we-work" className="flex flex-row justify-center items-center px-[16px] py-[16px] gap-[10px] w-[168.63px] h-[56px] bg-[#1A037F] rounded-[8px] hover:opacity-90 transition-opacity mt-2 font-['Figtree',sans-serif]">
           <span className="font-medium text-[16px] leading-[24px] text-right text-[#FFFFFF]">
             Mehr erfahren
           </span>
