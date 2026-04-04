@@ -3,19 +3,37 @@
 import Image from "next/image";
 import Link from 'next/link';
 import { useBooking } from "@/providers/Booking";
+import { useRef, useEffect } from "react";
 
 export default function Hero() {
   const { openModal } = useBooking()
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      // Set playback speed to 0.75x (75% of normal speed)
+      // Adjust this value as needed: 0.5 is half speed, 1.0 is normal speed
+      videoRef.current.playbackRate = 0.75;
+    }
+  }, []);
+
   return (
     <section className="relative w-full bg-[#FBFAF8] overflow-hidden pt-[120px] max-md:pt-0 lg:pt-[140px] min-h-screen lg:min-h-[1048px] flex flex-col lg:block">
 
-      {/* Blurred decorative backgrounds — hidden on mobile to keep it clean */}
-      <div className="absolute w-[635px] h-[161.42px] left-[-170px] top-[439px] bg-[#FBFAF8] blur-[35px] -rotate-[19.56deg] z-0 pointer-events-none hidden lg:block" />
-      <div className="absolute w-[635px] h-[161.42px] left-[256px] top-[430px] bg-[#FBFAF8] blur-[35px] -rotate-[5.89deg] z-0 pointer-events-none hidden lg:block" />
-      <div className="absolute w-[440.27px] h-[111.92px] left-[746px] top-[472px] bg-[#FBFAF8] blur-2xl rotate-[7.78deg] z-0 pointer-events-none hidden lg:block" />
-      <div className="absolute w-[635px] h-[161.42px] left-[999px] top-[482px] bg-[#FBFAF8] blur-[50px] rotate-[14.34deg] z-0 pointer-events-none hidden lg:block" />
-      <div className="absolute w-[924px] h-[169px] left-0 top-[230px] blur-[46.5px] rotate-34 bg-[rgba(25,32,38,0.09)] z-0 pointer-events-none hidden lg:block" />
-      <div className="absolute w-[924px] h-[169px] left-[95px] top-[642px] blur-3xl rotate-34 opacity-20 bg-[rgba(25,32,38,0.6)] z-0 pointer-events-none hidden lg:block" />
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/assets/Home/heroheader-bgr.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
       {/* ── MOBILE/TABLET LAYOUT (up to lg) ── */}
       <div className="relative z-20 flex flex-col lg:hidden min-h-screen">
@@ -68,17 +86,10 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Hero image — taller and pulled up closer to buttons */}
+        {/* Video Background (Mobile version - redundant but kept structure) */}
         <div className="relative z-0 flex-1 -mt-8 mx-0 w-full overflow-hidden min-h-[360px] sm:min-h-[460px]">
           <div className="absolute inset-x-0 top-0 h-[60px] bg-linear-to-b from-[#FBFAF8] to-transparent z-10" />
           <div className="absolute inset-x-0 bottom-0 h-[80px] bg-linear-to-b from-transparent to-[#FBFAF8] z-10" />
-          <Image
-            src="/assets/Home/HeroIMG.png"
-            alt="ripple"
-            fill
-            priority
-            className="object-cover object-center"
-          />
         </div>
       </div>
 
@@ -130,16 +141,9 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Main Bottom Image */}
+        {/* Main Bottom Area (Transparent for video) */}
         <div className="absolute w-full h-[757.99px] left-0 top-[290px] max-md:bottom-0  max-md:top-10 z-10 pointer-events-none flex justify-center overflow-visible">
-          <div className="absolute inset-x-0 bottom-0 h-[150px] bg-linear-to-b from-transparent  z-20" />
-          <Image
-            src="/assets/Home/HeroIMG.png"
-            alt="ripple"
-            fill
-            priority
-            className="object-cover object-top"
-          />
+          <div className="absolute inset-x-0 bottom-0 h-[150px] bg-linear-to-b from-transparent to-[#FBFAF8] z-20" />
         </div>
       </div>
 
