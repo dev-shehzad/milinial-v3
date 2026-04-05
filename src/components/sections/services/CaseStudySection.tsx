@@ -14,15 +14,18 @@ const caseStudies = [
   {
     logo: '/assets/services/logo-1.png',
     logoWidth: 110,
-    title: 'Wie ein Interim-COO-Setup Entscheidungstempo und Ownership erhöhte',
-    description: 'Entdecken Sie, wie ein klares Mandat in der Linie, saubere Entscheidungsfenster und ein einfacher Operating Rhythmus Meetinglast reduziert und Verantwortung dorthin gebracht haben, wo Umsetzung passiert.',
+    title: 'Wie vertrauliche Führungsbegleitung Souveränität im Konzernumfeld zurückbrachte',
+    description: 'Erfahren Sie, wie ein Bereichsleiter durch diskrete One-on-One-Reflexion seinen Gestaltungsraum klärte, strategische Verständigung mit der Konzernspitze aufbaute und so Orientierung ins Team zurückbrachte.',
     link: 'https://drive.proton.me/urls/G7Z31GJVSW#RTm4mnf47fk9',
+    buttonText: 'Case Study lesen'
   },
   {
     logo: '/assets/services/logo-2.png',
     logoWidth: 155,
-    description: 'Entdecken Sie, wie klare Trade-offs, ein schlanker Steuerungsrhythmus und transparente Verantwortungen aus vielen Initiativen ein umsetzbares Portfolio gemacht haben – mit sichtbaren Effekten auf Ergebnis und Führungskapazität.',
+    title: 'Wie gemeinsame Klarheit eine Klinikleitung aus der Blockade löste',
+    description: 'Erfahren Sie, wie gemeinsam erarbeitete Vision, Führungsprinzipien und klare Kommunikationswege aus gegenseitigen Vorwürfen ein konstruktives Miteinander formten – mit spürbarem kulturellem Wandel im Klinikalltag.',
     link: 'https://drive.proton.me/urls/VQJDC6ENNG#tg7LfKVYcLd4',
+    buttonText: 'Case Study lesen'
   },
   {
     logo: '/assets/services/logo-3.jpeg',
