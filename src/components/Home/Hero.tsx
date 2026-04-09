@@ -57,10 +57,10 @@ export default function Hero() {
             </h2>
           </div>
 
-          {/* Subheadline */}
+          
           {/* Subheadline */}
           <p className="font-['Inter'] font-medium text-[14px] sm:text-[16px] leading-[170%] text-center text-[#565959] opacity-80 m-0 w-full max-w-[500px] px-4 sm:px-6 break-words hyphens-auto">
-            Wir sichern und steigern Unternehmenswerte durch Turnaround, Value Creation und Transformation in KMU&apos;s und mittelständischen Grossunternehmen.
+            Wir sichern und steigern Unternehmenswerte durch Turnaround, Value Creation und Transformation in KMUs und mittelständischen Grossunternehmen.
           </p>
 
           {/* CTA Buttons */}
@@ -115,7 +115,7 @@ export default function Hero() {
 
           {/* Subheadline */}
           <p className="absolute w-[822px] min-h-[85px] left-[81px] top-[216px] font-['Inter'] font-medium text-[21px] leading-[170%] text-center text-[#565959] opacity-80 m-0 flex items-center justify-center">
-            Wir sichern und steigern Unternehmenswerte durch Turnaround, Value Creation und Transformation in KMU&apos;s und mittelständigen Grossunternehmen.
+            Wir sichern und steigern Unternehmenswerte durch Turnaround, Value Creation und Transformation in KMUs und mittelständigen Grossunternehmen.
           </p>
 
           {/* CTA Buttons */}

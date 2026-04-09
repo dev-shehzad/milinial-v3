@@ -39,7 +39,7 @@ export const ServicesHowItWorks: React.FC = () => {
           {/* Subheadline */}
           <p className="font-geist font-normal text-[16px] lg:text-[18px] leading-[170%] text-[#373A46] opacity-80 m-0 max-w-[540px]">
             Unkompliziert und vertraulich: Anfrage senden oder Erstgespräch
-            buchen – danach erfolgt eine kurze Einordnung, und der Start erfolgt
+            buchen. Danach erfolgt eine kurze Einordnung, und der Start erfolgt
             nach Absprache.
           </p>
         </div>

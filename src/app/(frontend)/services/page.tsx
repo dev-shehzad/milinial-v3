@@ -40,7 +40,7 @@ export default async function ServicesPage() {
           </h2>
           {/* Subheader */}
           <p className="font-['Inter',sans-serif] font-medium text-[16px] leading-[170%] text-center text-[#4C5157] m-0 max-w-[802px]">
-            Drei Service-Linien für KMU & Mid-Market: Stabilisieren, integrieren, transformieren – strukturiert, umsetzungsstark, verlässlich.
+            Drei Service-Linien für KMU und Mid-Market: Stabilisieren, integrieren, transformieren – strukturiert, umsetzungsstark, verlässlich.
           </p>
         </div>
 
@@ -50,12 +50,12 @@ export default async function ServicesPage() {
           description="Stabilität und Liquiditätssicherung: nicht (nur) durch Kostenkürzung, sondern durch operative Klarheit und Führung."
           situations={[
             'Ergebnis- und Liquiditätsdruck; Kostenziele gehen nicht mehr auf',
-            'Margenerosion, Preiskraft schwindet bei Stoff/Log. Volatilität',
+            'Margenerosion, Preiskraft schwindet',
             'Operative Probleme: Schlechte Quali, Ausfälle, Durchlaufzeiten',
             'Führung im Übergang: Unsicherheit, Haltung, unklare Erwartungshaltung'
           ]}
           benefits={[
-            'Sofortige Transparenz: Klares Cash-Reporting, Maßnahmen-Tracking',
+            'Sofortige Transparenz: Klares Cash-Reporting, Massnahmen-Tracking',
             'Operative Stabilisierung: Einsetzung in die kritischen Mechanismen',
             'Kommunikative Führung: In sensiblen Momenten',
             'Steuerung & Konsequenz: Takt, KPI-Logik, Entscheidungs- & Genehmigungsmechanik'
@@ -88,7 +88,7 @@ export default async function ServicesPage() {
         {/* Service 3: Transformation */}
         <ServiceSection
           title="Transformation (Performance & Wirksamkeit)"
-          description="Leistungssteigerung, Wachstum und Veränderung verankern – mit einem Vorgehen, das den Alltag greift statt nur Papierwände zu erstellen."
+          description="Leistungssteigerung, Wachstum und Veränderung verankern – mit einem Vorgehen, das den Alltag pragmatisch integriert und Hochglanzbrosuhüren weglässt."
           situations={[
             'Wachstumsschmerzen: Komplexität frisst Marge, Führung kommt nicht hinterher',
             'Strategiewechsel, neues Geschäftsmodell, Portfoliobereinigung',

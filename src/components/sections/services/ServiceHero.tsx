@@ -27,7 +27,7 @@ export const ServiceHero: React.FC = () => {
 
           {/* Subtext */}
           <p className="font-['Inter',sans-serif] font-medium text-[18px] md:text-[22px] lg:text-[32px] leading-[150%] tracking-[-0.5px] lg:tracking-[-1px] text-[#000000] w-full m-0">
-            Wir stabilisieren Unternehmen in kritischen Phasen, integrieren nach Übernahme/Fusion und verbessern Leistung nachhaltig.
+            Wir stabilisieren Unternehmen in kritischen Phasen, integrieren nach Übernahme / Fusion und verbessern Leistung nachhaltig.
           </p>
         </div>
 

@@ -52,7 +52,7 @@ export default function Leadership() {
             </h2>
 
             <p className="font-outfit font-normal text-[16px] lg:text-[20px] leading-[1.6] lg:leading-[160%] text-[#5E6075] m-0">
-              Wir kennen Restrukturierungen, Turnarounds und Transformationen aus der ersten Reihe: als Interim-COO, Operating Partner und Sparringpartner für Eigentümer und Management. Wir verbinden strategische Klarheit mit konsequenter operativer Umsetzung und stehen in kritischen Phasen selbst in der Verantwortung.
+              Wir kennen Restrukturierungen, Turnarounds und Transformationen aus der ersten Reihe: als Interim-COO, Operating Partner und Sparringpartner für Eigentümerschaften und Management. Wir verbinden strategische Klarheit mit konsequenter operativer Umsetzung und stehen in kritischen Phasen selbst in der Verantwortung.
             </p>
           </div>
         </div>

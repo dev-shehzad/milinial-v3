@@ -66,7 +66,7 @@ export default function ServicesSection() {
           {/* Right Text & Button */}
           <div className="flex flex-col items-start gap-[32px] w-full lg:w-[486px]">
             <p className="font-['Inter',sans-serif] font-normal text-[16px] lg:text-[18px] leading-[170%] text-[#3B3B3B] m-0">
-              Individuell zugeschnittene Beratung, Interim-Lösungen und Restrukturierungen & Turnaround Partner - gezielt für Unternehmen, die mehr als Standard erwarten.
+              Individuell zugeschnittene Beratung, Interim-Lösungen, Restrukturierungen und Turnaround Partner. Gezielt für Unternehmen, die mehr als Standard erwarten.
             </p>
 
             <Link href="/services" className="flex flex-row justify-center items-center px-[24px] py-[14px] gap-[8px] h-[56px] bg-[#19037C] hover:bg-[#11015c] transition-colors rounded-[8px] w-max">

@@ -31,7 +31,7 @@ export const BookPromo: React.FC = () => {
             <p
               className="max-w-[550px] font-sans font-medium text-[16px] md:text-[18px] leading-[140%] md:leading-[120%] text-[#D8D8D8] mb-6 md:mb-8"
             >
-              Unser aktuelles Buch &quot;Patience First&quot; zeigt, wie Sie als Arzt Führung leben, Ihr Team nachhaltig für sich gewinnen und den Klinik-Erfolg langfristig sichern.
+              Unser aktuelles Buch  „Patients First“ zeigt, wie Sie als Arzt Führung leben, Ihr Team nachhaltig für sich gewinnen und den Klinik-Erfolg langfristig sichern.
             </p>
 
             <div className="w-full sm:w-auto mt-2">
