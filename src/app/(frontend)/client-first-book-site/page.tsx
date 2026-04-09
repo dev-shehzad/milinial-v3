@@ -21,9 +21,10 @@ export default async function PatientsFirstBookPage() {
     slug: 'book-benefits',
   })
 
-  const bookFAQ = await payload.findGlobal({
-    slug: 'book-faq',
-  })
+ const bookFAQ = await payload.findGlobal({
+  slug: 'clients-first-book-faq',
+})
+
 
   return (
     <div className="bg-[#FBFAF8] min-h-screen text-foreground">
