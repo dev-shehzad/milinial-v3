@@ -87,9 +87,8 @@ export const TrendingUpIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <path d="M17 6H23V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 )
-
 export const ArrowUpRightIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M10 1H17.7725L19 3L17.7725 5H10V1ZM10 8H2.2275L1 10L2.2275 12H10V8Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
   </svg>
 )
