@@ -54,6 +54,7 @@ export const BookBenefits: GlobalConfig = {
     }
   ]
 }
+
 export const ClientsFirstBookBenefits: GlobalConfig = {
   slug: 'clients-first-book-benefits',
   access: {
@@ -92,6 +93,12 @@ export const ClientsFirstBookBenefits: GlobalConfig = {
             { label: 'Network', value: 'Network' },
             { label: 'Search', value: 'Search' },
             { label: 'Hand Coins', value: 'HandCoins' },
+            { label: 'Star', value: 'Star' },
+            { label: 'Compass', value: 'Compass' },
+            { label: 'Award', value: 'Award' },
+            { label: 'List', value: 'List' },
+            { label: 'Trending Up', value: 'TrendingUp' },
+            { label: 'Arrow Up Right', value: 'ArrowUpRight' },
           ]
         },
         {

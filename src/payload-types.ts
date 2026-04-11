@@ -1804,7 +1804,19 @@ export interface ClientsFirstBookBenefit {
   eyebrow: string;
   headline: string;
   benefits: {
-    icon: 'Megaphone' | 'Zap' | 'ShieldCheck' | 'Network' | 'Search' | 'HandCoins';
+    icon:
+      | 'Megaphone'
+      | 'Zap'
+      | 'ShieldCheck'
+      | 'Network'
+      | 'Search'
+      | 'HandCoins'
+      | 'Star'
+      | 'Compass'
+      | 'Award'
+      | 'List'
+      | 'TrendingUp'
+      | 'ArrowUpRight';
     title: string;
     description: string;
     id?: string | null;
