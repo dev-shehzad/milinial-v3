@@ -58,8 +58,8 @@ export default function PerspectiveSection() {
             Gerade im Management ist diese doppelte Verankerung ein grosser
             Vorteil: Wer die Wurzeln versteht und zugleich den Wandel treiben
             kann, schafft nachhaltige Entwicklung. Wir bringen diese
-            Perspektive mit und verbinden Erfahrung mit Innovationsgeist,
-            operative Exzellenz mit strategischer Weitsicht.
+            Perspektive mit und verbinden Erfahrung mit Innovationsgeist, sowie 
+            operative Exzellens mit strategischer Weitsicht.
           </p>
         </div>
 
