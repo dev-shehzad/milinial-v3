@@ -17,7 +17,7 @@ const PatientsFirstBookAbout = () => {
 
           {/* Heading */}
           <h2 className="font-['Inter',sans-serif] font-semibold text-[36px] md:text-[48px] lg:text-[57px] text-[#1E1A1C] leading-[1.1] lg:leading-[60px] tracking-[0px] lg:tracking-[-1.5px] text-center w-full mx-auto">
-            Was in „Patience First“ drinsteckt
+            Was in „Patients First“ drinsteckt
           </h2>
         </div>
 

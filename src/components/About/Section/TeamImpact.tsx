@@ -49,7 +49,7 @@ export default function TeamImpactSection() {
                      Stationen & Erfahrung
                    </h3>
                    <p className="font-inter font-normal text-[16px] leading-[170%] text-[#4B4B56]">
-                     Philipp verbindet strategische Weitsicht mit operativer Umsetzung. Er führte standort- und funktionsübergreifende Teams, verantwortete Transformationsprogramme in Gesundheitswesen und Professional Services und war zuletzt COO/General Manager einer Organisation mit 520 Mitarbeitenden – inklusive Standortintegration, Synergieumsetzung, operativer Mehrjahresplanung und ERP-Transformation (cloud-basiert, AI-unterstützt).
+                     Philipp verbindet strategische Weitsicht mit operativer Umsetzung. Er führte standort- und funktionsübergreifende Teams, verantwortete Transformationsprogramme in Gesundheitswesen und Professional Services und war zuletzt COO / General Manager einer Organisation mit 520 Mitarbeitenden – inklusive Standortintegration, Synergieumsetzung, operativer Mehrjahresplanung und ERP-Transformation (cloud-basiert, AI-unterstützt).
                    </p>
                 </div>
              </div>
@@ -63,7 +63,7 @@ export default function TeamImpactSection() {
                 <div className="w-full min-h-[82px] bg-[#D6CDFE]/40 flex flex-row items-center justify-between pl-[10px]">
                    <div className="flex flex-col py-2 pr-2">
                       <span className="font-inter font-semibold text-[18px] leading-[170%] text-[#4B4B56]">Philipp R. Juchli (Jg. 1984)</span>
-                      <span className="font-inter font-normal text-[16px] leading-[170%] text-[#4B4B56]">Co-Founder und Geschäftsführer Millenial-C</span>
+                      <span className="font-inter font-normal text-[16px] leading-[170%] text-[#4B4B56]">Founding Partner</span>
                    </div>
                    <div className="flex flex-row pr-[5px] gap-[8px] h-[82px] items-center">
                      <a 
@@ -101,7 +101,7 @@ export default function TeamImpactSection() {
                 <div className="w-full min-h-[82px] bg-[#D6CDFE]/40 flex flex-row items-center justify-between pl-[10px]">
                    <div className="flex flex-col py-2 pr-2">
                       <span className="font-inter font-semibold text-[18px] leading-[170%] text-[#4B4B56]">Nina I. Koch (Jg. 1982)</span>
-                      <span className="font-inter font-normal text-[16px] leading-[170%] text-[#4B4B56]">Co-Founder</span>
+                      <span className="font-inter font-normal text-[16px] leading-[170%] text-[#4B4B56]">Founding Partner</span>
                    </div>
                    <div className="flex flex-row pr-[5px] gap-[8px] h-[82px] items-center">
                      <a 
@@ -136,7 +136,7 @@ export default function TeamImpactSection() {
                      Stationen & Erfahrung
                    </h3>
                    <p className="font-inter font-normal text-[16px] leading-[170%] text-[#4B4B56]">
-                     Nina steht für Marke, Positionierung und Kommunikation mit messbarer Wirkung. 10+ Jahren GL-Erfahrung in Marketing & Kommunikation. Führte u.a. als Head of Marketing & Communications (Lenz & Staehelin) Marken- und Wachstumsinitiativen, inkl. Marken-Refresh 2023 (18 Monate, 50 Stakeholder), Prozess-Digitalisierung/Automatisierung sowie Kampagnenarbeit. Zuvor Aufbau und Leitung Marketing/Kommunikation bei Kellerhals Carrard; davor Unilever (Strategic Event Management). Ehrenamtlich in Kommissionen und als Vorstandsmitglied tätig.
+                     Nina steht für Marke, Positionierung und Kommunikation mit messbarer Wirkung. 10+ Jahren GL-Erfahrung in Marketing & Kommunikation. Führte u.a. als Head of Marketing & Communications (Lenz & Staehelin) Marken- und Wachstumsinitiativen, inkl. Marken-Refresh 2023 (18 Monate, 50 Stakeholder), Prozess-Digitalisierung / Automatisierung sowie Kampagnenarbeit. Zuvor Aufbau und Leitung Marketing / Kommunikation bei Kellerhals Carrard; davor Unilever (Strategic Event Management). Ehrenamtlich in Kommissionen und als Vorstandsmitglied tätig.
                    </p>
                 </div>
              </div>

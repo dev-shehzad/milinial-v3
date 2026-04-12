@@ -93,7 +93,7 @@ export default async function Page() {
                 className="max-w-[800px] font-inter font-medium text-[16px] md:text-[21px] leading-[170%] text-center text-[#191820]"
               >
                 Frische Insights aus laufender Arbeit. Was wir gerade sehen, lernen und umsetzen
-                mit Relevanz für Entscheider.
+                mit Relevanz für Entscheiderinnen und Entscheider.
               </p>
             </div>
           </div>

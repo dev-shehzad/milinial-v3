@@ -5,7 +5,7 @@ import Link from 'next/link';
 const items = [
   "Erreichen der Marktführerschaft. Setzen neuer Branchenstandards",
   "Brückenbauer mit dem Talent, Menschen zu begeistern und zu verbinden",
-  "20 Jahre Führung funktionsübergreifender Teams, davon 15+ Jahre C‑Level/Top-Management",
+  "20 Jahre Führung funktionsübergreifender Teams, davon 15+ Jahre C‑Level / Top-Management",
   "Stakeholder-sicher: VR, Geschäftsführung, Agenturen, Sales, Technik, Finance, Verwaltung",
   "Führung über 6 Ebenen und bis zu 10 Standorte: CH, DE, China, Japan",
 ];

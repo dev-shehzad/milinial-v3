@@ -19,7 +19,7 @@ export interface ServicesCTAProps {
 
 export const ServicesCTA: React.FC<ServicesCTAProps> = ({
   title = "Nicht gefunden, was Sie suchen?",
-  description = "Viele Situationen lassen sich nicht sauber in drei Kategorien pressen. Wenn Ihr Anliegen in eine andere Richtung geht: gerne können Sie uns eine Anfrage hinteren - wir melden uns umgehend und besprechen gemeinsam , ob und wie wir Sie unterstützen können. Unser Ansatz Leadership by Congruence© funktioniert nicht nur für unsere Kernleistungen.",
+  description = "Viele Situationen lassen sich nicht sauber in drei Kategorien pressen. Wenn Ihr Anliegen in eine andere Richtung geht: gerne können Sie uns eine Anfrage hinterlassen - wir melden uns umgehend und besprechen gemeinsam , ob und wie wir Sie unterstützen können. Unser Ansatz Leadership by Congruence© funktioniert nicht nur für unsere Kernleistungen.",
   imageSrc = "/assets/services/man-standing.png",
   primaryButtonText = "Erstgespräch buchen",
   primaryButtonHref = "#booking",

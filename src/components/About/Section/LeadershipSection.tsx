@@ -22,7 +22,7 @@ export default function LeadershipSection() {
 
             {/* Heading */}
             <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] leading-[1.2] font-semibold text-[#111827] mb-4 lg:mb-6">
-              Leadership by Congruence® – so
+              Leadership by Congruence© – so
               <br className="hidden sm:block" />
               {" "}machen wir Umsetzung möglich
             </h2>
@@ -42,7 +42,7 @@ export default function LeadershipSection() {
               className="inline-flex flex-row items-center pl-[16px] pr-[8px] py-[8px] gap-[12px] rounded-[16px] h-[54px] hover:opacity-90 transition-opacity bg-[#1a037f] shadow-[0px_75px_30px_rgba(0,0,0,0.01),0px_42px_25px_rgba(0,0,0,0.05),0px_19px_19px_rgba(0,0,0,0.09),0px_5px_10px_rgba(0,0,0,0.1)] font-['Figtree',sans-serif]"
             >
               <span className="font-semibold text-[18px] lg:text-[20px] leading-[170%] tracking-[-0.2px] text-white whitespace-nowrap">
-                Mehr erfahren über LbC®
+                Mehr erfahren über LbC©
               </span>
               <div className="flex flex-row items-center justify-center p-[8px] gap-[8px] w-[38px] h-[38px] bg-white rounded-[12px]">
                 <ArrowUpRight className="w-5 h-5 text-[#888888]" />

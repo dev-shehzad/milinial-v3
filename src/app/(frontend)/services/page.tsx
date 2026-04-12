@@ -88,7 +88,7 @@ export default async function ServicesPage() {
         {/* Service 3: Transformation */}
         <ServiceSection
           title="Transformation (Performance & Wirksamkeit)"
-          description="Leistungssteigerung, Wachstum und Veränderung verankern – mit einem Vorgehen, das den Alltag pragmatisch integriert und Hochglanzbrosuhüren weglässt."
+          description="Leistungssteigerung, Wachstum und Veränderung verankern – mit einem Vorgehen, das den Alltag pragmatisch integriert und Hochglanzbroschüren weglässt."
           situations={[
             'Wachstumsschmerzen: Komplexität frisst Marge, Führung kommt nicht hinterher',
             'Strategiewechsel, neues Geschäftsmodell, Portfoliobereinigung',
