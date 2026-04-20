@@ -34,7 +34,7 @@ const Footer = () => {
                             <h3 className="font-inter font-medium text-[16px] leading-[1.8] tracking-[-0.0125em] text-white mb-6">Navigation</h3>
                             <ul className="flex flex-col gap-4">
                                 <li><Link href="/" className="font-geist font-normal text-[16px] leading-[1.7] tracking-[-0.025em] text-[#A1A1AA] hover:text-white transition-colors">Home</Link></li>
-                                <li><Link href="/angebot" className="font-geist font-normal text-[16px] leading-[1.7] tracking-[-0.025em] text-[#A1A1AA] hover:text-white transition-colors">Angebot</Link></li>
+                                <li><Link href="/services" className="font-geist font-normal text-[16px] leading-[1.7] tracking-[-0.025em] text-[#A1A1AA] hover:text-white transition-colors">Angebot</Link></li>
                                 <li><Link href="/about" className="font-geist font-normal text-[16px] leading-[1.7] tracking-[-0.025em] text-[#A1A1AA] hover:text-white transition-colors">Über Uns</Link></li>
                                 <li><Link href="/blogs" className="font-geist font-normal text-[16px] leading-[1.7] tracking-[-0.025em] text-[#A1A1AA] hover:text-white transition-colors">Blog</Link></li>
                                 <li><Link href="/kontakt" className="font-geist font-normal text-[16px] leading-[1.7] tracking-[-0.025em] text-[#A1A1AA] hover:text-white transition-colors">Kontakt</Link></li>
@@ -58,7 +58,7 @@ const Footer = () => {
                                 <li><Link href="/impressum" className="font-geist font-normal text-[16px] leading-[1.7] tracking-[-0.025em] text-[#A1A1AA] hover:text-white transition-colors">Impressum</Link></li>
                                 <li><Link href="/datenschutz" className="font-geist font-normal text-[16px] leading-[1.7] tracking-[-0.025em] text-[#A1A1AA] hover:text-white transition-colors">Datenschutz</Link></li>
                                 <li><Link href="/agb" className="font-geist font-normal text-[16px] leading-[1.7] tracking-[-0.025em] text-[#A1A1AA] hover:text-white transition-colors">AGB</Link></li>
-                                <li><Link href="https://milinial-v2-vbzx.vercel.app/ai-transparency" className="font-geist font-normal text-[16px] leading-[1.7] tracking-[-0.025em] text-[#A1A1AA] hover:text-white transition-colors">AI Transparency</Link></li>
+                                <li><Link href="/ai-transparency" className="font-geist font-normal text-[16px] leading-[1.7] tracking-[-0.025em] text-[#A1A1AA] hover:text-white transition-colors">AI Transparency</Link></li>
                             </ul>
                         </div>
 

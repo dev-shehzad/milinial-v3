@@ -9,7 +9,8 @@ export default function StepThree() {
   const [error, setError] = useState<string | null>(null)
 
   const [form, setForm] = useState({
-    name: '',
+    vorname: '',
+    nachname: '',
     email: '',
     rolle: '',
     unternehmen: '',
@@ -38,8 +39,8 @@ export default function StepThree() {
     setForm((prev) => ({ ...prev, [field]: value }))
 
   const handleSubmit = async () => {
-    if (!form.name.trim() || !form.email.trim()) {
-      setError('Bitte Name und E-Mail ausfüllen.')
+    if (!form.vorname.trim() || !form.nachname.trim() || !form.email.trim()) {
+      setError('Bitte Vorname, Nachname und E-Mail ausfüllen.')
       return
     }
     setLoading(true)
@@ -80,9 +81,9 @@ export default function StepThree() {
 
           {/* Top Fields: Name, Email */}
           <div className="flex flex-col gap-[32px] w-full max-w-[425px]">
-            {/* Name */}
+            {/* Vorname */}
             <div className="relative w-full h-[56px]">
-              <div className={labelClass}>Name *</div>
+              <div className={labelClass}>Vorname *</div>
               <div className={inputContainerClass}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
@@ -91,10 +92,29 @@ export default function StepThree() {
                 <div className={inputDivider}></div>
                 <input
                   type="text"
-                  placeholder="Ihr Name..."
+                  placeholder="Ihr Vorname..."
                   className={inputClass}
-                  value={form.name}
-                  onChange={(e) => updateForm('name', e.target.value)}
+                  value={form.vorname}
+                  onChange={(e) => updateForm('vorname', e.target.value)}
+                />
+              </div>
+            </div>
+
+            {/* Nachname */}
+            <div className="relative w-full h-[56px]">
+              <div className={labelClass}>Nachname *</div>
+              <div className={inputContainerClass}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+                <div className={inputDivider}></div>
+                <input
+                  type="text"
+                  placeholder="Ihr Nachname..."
+                  className={inputClass}
+                  value={form.nachname}
+                  onChange={(e) => updateForm('nachname', e.target.value)}
                 />
               </div>
             </div>

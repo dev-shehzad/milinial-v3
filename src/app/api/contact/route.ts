@@ -107,7 +107,7 @@ export async function POST(req: NextRequest) {
       to: email,
       subject: 'Ihre Anfrage bei Millennial C',
       html: emailWrapper(`
-        ${header(`Hallo ${vorname},`, 'Ihre Anfrage ist bei uns eingegangen.')}
+        ${header(`Hallo ${fullName},`, 'Ihre Anfrage ist bei uns eingegangen.')}
         <div style="padding:40px;">
           <p style="color:${textColor};font-size:16px;line-height:1.7;margin-top:0;margin-bottom:32px;">
             Vielen Dank für Ihre Nachricht und Ihr Interesse. Wir haben Ihr Anliegen erhalten und prüfen es derzeit. Wir werden uns so schnell wie möglich bei Ihnen melden.

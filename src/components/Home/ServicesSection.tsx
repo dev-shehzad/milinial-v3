@@ -57,7 +57,7 @@ export default function ServicesSection() {
             </div>
 
             <h2 className="font-['Inter',sans-serif] font-semibold text-[36px] lg:text-[57px] leading-[1.2] lg:leading-[120%] tracking-[-1.5px] text-[#0B1327] m-0">
-              Handfeste Lösungen statt
+              Handfeste Lösungen statt{' '}
               <br className="hidden lg:block" />
               Management-Floskeln
             </h2>

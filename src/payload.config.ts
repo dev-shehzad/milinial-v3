@@ -24,6 +24,29 @@ const dirname = path.dirname(filename)
 
 export default buildConfig({
   admin: {
+    meta: {
+      icons: [
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          url: '/favicon-16x16.svg',
+        },
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          url: '/favicon-32x32.svg',
+        },
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          url: '/favicon-48x48.svg',
+        },
+        {
+          rel: 'icon',
+          url: '/favicon.ico',
+        },
+      ],
+    },
     components: {
       // The `BeforeLogin` component renders a message that you see while logging into your admin panel.
       // Feel free to delete this at any time. Simply remove the line below.

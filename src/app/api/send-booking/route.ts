@@ -4,13 +4,15 @@ import nodemailer, { TransportOptions } from 'nodemailer'
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { name, email, rolle, unternehmen, mobile, ort, helpOptions, anmerkung, date, time } =
+    const { vorname, nachname, email, rolle, unternehmen, mobile, ort, helpOptions, anmerkung, date, time } =
       body
 
     // Validate required fields
-    if (!name || !email) {
-      return NextResponse.json({ error: 'Name und E-Mail sind Pflichtfelder.' }, { status: 400 })
+    if (!vorname || !nachname || !email) {
+      return NextResponse.json({ error: 'Vorname, Nachname und E-Mail sind Pflichtfelder.' }, { status: 400 })
     }
+
+    const fullName = `${vorname} ${nachname}`
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -76,12 +78,12 @@ export async function POST(req: NextRequest) {
     await transporter.sendMail({
       from: `"Millennial C Bookings" <${process.env.SMTP_FROM}>`,
       to: process.env.SMTP_TO,
-      subject: `[Termin] Neue Anfrage von ${name}`,
+      subject: `[Termin] Neue Anfrage von ${fullName}`,
       html: emailWrapper(`
         ${header('Neue Terminanfrage', 'Details der neuen Buchungsanfrage')}
         <div style="padding:40px;">
           <table style="width:100%;border-collapse:collapse;">
-            ${row('Name', name)}
+            ${row('Name', fullName)}
             ${row('E-Mail', `<a href="mailto:${email}" style="color:${brandColor};text-decoration:none;">${email}</a>`)}
             ${rolle ? row('Rolle', rolle) : ''}
             ${unternehmen ? row('Unternehmen', unternehmen) : ''}
@@ -106,7 +108,7 @@ export async function POST(req: NextRequest) {
       to: email,
       subject: 'Ihre Terminanfrage bei Millennial C',
       html: emailWrapper(`
-        ${header(`Hallo ${name},`, 'Ihre Terminanfrage ist bei uns eingegangen.')}
+        ${header(`Hallo ${fullName},`, 'Ihre Terminanfrage ist bei uns eingegangen.')}
         <div style="padding:40px;">
           <p style="color:${textColor};font-size:16px;line-height:1.7;margin-top:0;margin-bottom:32px;">
             Vielen Dank für Ihr Vertrauen. Wir haben Ihre Terminanfrage erhalten und werden uns in Kürze mit Ihnen in Verbindung setzen, um den Termin final zu bestätigen.

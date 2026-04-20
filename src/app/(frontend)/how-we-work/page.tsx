@@ -6,7 +6,7 @@ import { ProblemSolutionSection } from '@/components/sections/ProblemSolutionSec
 import { FeatureGrid } from '@/components/sections/FeatureGrid'
 import { SimpleCTA } from '@/components/sections/SimpleCTA'
 import { ServicesHowItWorks } from '@/components/sections/services/ServicesHowItWorks'
-import { TestimonialSlider } from '@/components/sections/TestimonialSlider'
+
 import PatientsFirstBookFAQ from '@/components/PatientsFirstBookSite/FAQ'
 import ChangeSection from '@/components/sections/Change'
 import MarketRealitySection from '@/components/sections/MarketRealitySection'
@@ -96,8 +96,6 @@ export default async function Page() {
       <ServicesHowItWorks />
       <SimpleCTA />
 
-      <TestimonialSlider />
-
       <PatientsFirstBookFAQ data={howWeWorkFAQ} />
 
       <BottomCTA
@@ -107,7 +105,7 @@ export default async function Page() {
         primaryButtonText="Leistungen ansehen"
         primaryButtonHref="/services"
         secondaryButtonText="Angebot anfragen"
-        secondaryButtonHref="/contact"
+        secondaryButtonHref="/kontakt"
       />
 
       <Memberships />
