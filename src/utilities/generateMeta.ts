@@ -27,8 +27,8 @@ export const generateMeta = async (args: {
   const ogImage = getImageURL(doc?.meta?.image)
 
   const title = doc?.meta?.title
-    ? doc?.meta?.title + ' | Millenial Group'
-    : 'Millenial Group'
+    ? doc?.meta?.title + ' | MillennialC - Leadership Advisory'
+    : 'MillennialC - Leadership Advisory'
 
   return {
     description: doc?.meta?.description,

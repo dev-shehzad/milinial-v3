@@ -134,7 +134,7 @@ export default async function DatenschutzPage() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: "Datenschutz | Millenial Group",
+    title: "Datenschutz | MillennialC - Leadership Advisory",
     description:
       "Alle rechtlichen Angaben und Informationen zum Umgang mit personenbezogenen Daten auf einen Blick.",
   };

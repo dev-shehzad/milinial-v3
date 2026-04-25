@@ -107,7 +107,7 @@ export default async function ImpressumPage() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: 'Impressum & Datenschutz | Millenial Group',
+    title: 'Impressum & Datenschutz | MillennialC - Leadership Advisory',
     description: 'Alle rechtlichen Angaben und Informationen zum Umgang mit personenbezogenen Daten auf einen Blick.',
   }
 }

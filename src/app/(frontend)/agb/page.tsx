@@ -134,7 +134,7 @@ export default async function AGBPage() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: "AGB | Millenial Group",
+    title: "AGB | MillennialC - Leadership Advisory",
     description:
       "Was Sie wissen sollten – Rechte, Pflichten und Bedingungen im Überblick.",
   };

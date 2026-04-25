@@ -128,6 +128,6 @@ export default async function Page() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Blogs | Millenial Group`,
+    title: `Blogs | MillennialC - Leadership Advisory`,
   }
 }
