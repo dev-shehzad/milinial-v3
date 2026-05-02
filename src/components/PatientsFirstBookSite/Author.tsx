@@ -24,7 +24,7 @@ const PatientsFirstBookAuthor = () => {
                 Philipp R. Juchli
               </h3>
               <p className="font-['Inter',sans-serif] font-normal text-[16px] leading-[180%] text-[#160C00] opacity-80">
-                Geschäftsführer Millennium-C
+                Geschäftsführer MillenniumC
               </p>
             </div>
 

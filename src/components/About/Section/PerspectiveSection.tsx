@@ -22,8 +22,8 @@ export default function PerspectiveSection() {
 
             <p className="font-inter font-normal text-[18px] lg:text-[20px] leading-[170%] text-[#4D4F54] mt-[16px]">
               Millennials haben den Wandel nicht nur erlebt, sondern
-              mitgestaltet. Sie schätzt Beständigkeit, persönlichen Austausch
-              und langfristiges Denken – und beherrscht zugleich die Sprache
+              mitgestaltet. Sie schätzen Beständigkeit, Austausch,
+              langfristiges Denken und beherrschen zugleich die Sprache
               der digitalen Transformation: vernetzt, agil und
               lösungsorientiert. Ideale Brückenbauer zu allen Generationen.
               Ergebnisorientiert, transparent und mit Tempo.
@@ -59,7 +59,7 @@ export default function PerspectiveSection() {
             Vorteil: Wer die Wurzeln versteht und zugleich den Wandel treiben
             kann, schafft nachhaltige Entwicklung. Wir bringen diese
             Perspektive mit und verbinden Erfahrung mit Innovationsgeist, sowie 
-            operative Exzellens mit strategischer Weitsicht.
+            operative Exzellenz mit strategischer Weitsicht.
           </p>
         </div>
 
